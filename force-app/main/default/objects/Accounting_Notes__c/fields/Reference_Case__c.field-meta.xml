@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>MVP1.0 Select a Case where the Learner has requested for Deferment, Withdrawal OR Refund. 
+Alternatively if you have an email communication upload it as an attachment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a Case where the Learner has requested for Deferment, Withdrawal OR Refund. 
+Alternatively if you have an email communication upload it as an attachment.</inlineHelpText>
+    <label>Reference Case</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Case.AccountId</valueField>
+        </filterItems>
+        <infoMessage>Select a Case where the Learner has requested for Deferment, Withdrawal OR Refund. 
+Alternatively if you have an email communication upload it as an attachment.</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Accounting Notes</relationshipLabel>
+    <relationshipName>Accounting_Notes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

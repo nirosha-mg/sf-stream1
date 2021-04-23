@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NRICValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF((ISPICKVAL( NRIC_Type__c , &apos;Singapore Citizen/PR&apos;) || ISPICKVAL( NRIC_Type__c , &apos;FIN&apos;)) &amp;&amp; LEN(NRIC__c ) != 0 ,
+NOT(REGEX( NRIC__c , &quot;[S F T G][0-9]{7}[A-Z]&quot;)),
+false )</errorConditionFormula>
+    <errorMessage>Enter Valid NRIC/FIN value</errorMessage>
+</ValidationRule>

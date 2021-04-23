@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PD_Receipt</fullName>
+    <active>true</active>
+    <description>MVP 1.0</description>
+    <label>PD Receipt</label>
+    <picklistValues>
+        <picklist>Payment_By__c</picklist>
+        <values>
+            <fullName>CROSS SELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SDF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Agile At Scale</fullName>
+        <default>false</default>
+        <label>Agile At Scale</label>
+    </customValue>
+    <customValue>
+        <fullName>Agility</fullName>
+        <default>false</default>
+        <label>Agility</label>
+    </customValue>
+    <customValue>
+        <fullName>AI SmokeTest</fullName>
+        <default>false</default>
+        <label>AI SmokeTest</label>
+    </customValue>
+    <customValue>
+        <fullName>Artificial Intelligence</fullName>
+        <default>false</default>
+        <label>Artificial Intelligence</label>
+    </customValue>
+    <customValue>
+        <fullName>Business &amp; Finance</fullName>
+        <default>false</default>
+        <label>Business &amp; Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Insight</fullName>
+        <default>false</default>
+        <label>Business Insight</label>
+    </customValue>
+    <customValue>
+        <fullName>Category 1</fullName>
+        <default>false</default>
+        <label>Category 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Change Management</fullName>
+        <default>false</default>
+        <label>Change Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Communication</fullName>
+        <default>false</default>
+        <label>Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Communication - General</fullName>
+        <default>false</default>
+        <label>Communication - General</label>
+    </customValue>
+    <customValue>
+        <fullName>Communication - Spoken</fullName>
+        <default>false</default>
+        <label>Communication - Spoken</label>
+    </customValue>
+    <customValue>
+        <fullName>Communication - Written</fullName>
+        <default>false</default>
+        <label>Communication - Written</label>
+    </customValue>
+    <customValue>
+        <fullName>Complex Adaptive Systems</fullName>
+        <default>false</default>
+        <label>Complex Adaptive Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Creativity &amp; Innovation</fullName>
+        <default>false</default>
+        <label>Creativity &amp; Innovation</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Service</fullName>
+        <default>false</default>
+        <label>Customer Service</label>
+    </customValue>
+    <customValue>
+        <fullName>CX &amp; UX</fullName>
+        <default>false</default>
+        <label>CX,UX &amp; UI</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Analytics</fullName>
+        <default>false</default>
+        <label>Data Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>Design Thinking</fullName>
+        <default>false</default>
+        <label>Design Thinking</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Practices</fullName>
+        <default>false</default>
+        <label>Digital Practices</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Transformation</fullName>
+        <default>false</default>
+        <label>Digital Transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Disruptive Innovation</fullName>
+        <default>false</default>
+        <label>Disruptive Innovation</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversity Management</fullName>
+        <default>false</default>
+        <label>Diversity Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Employability Skills System</fullName>
+        <default>false</default>
+        <label>Employability Skills System</label>
+    </customValue>
+    <customValue>
+        <fullName>Events &amp; Conferences</fullName>
+        <default>false</default>
+        <label>Events &amp; Conferences</label>
+    </customValue>
+    <customValue>
+        <fullName>Evergreen Leadership</fullName>
+        <default>false</default>
+        <label>Evergreen Leadership</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance &amp; Legal</fullName>
+        <default>false</default>
+        <label>Finance &amp; Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>General Management</fullName>
+        <default>false</default>
+        <label>General Management</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Development</fullName>
+        <default>false</default>
+        <label>HR Development</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Management</fullName>
+        <default>false</default>
+        <label>HR Management</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Management &amp; Development</fullName>
+        <default>false</default>
+        <label>HR Management &amp; Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Individual : Social &amp; Self Management</fullName>
+        <default>false</default>
+        <label>Individual : Social &amp; Self Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Innovation</fullName>
+        <default>false</default>
+        <label>Innovation</label>
+    </customValue>
+    <customValue>
+        <fullName>Innovation Ecosystem</fullName>
+        <default>false</default>
+        <label>Innovation Ecosystem</label>
+    </customValue>
+    <customValue>
+        <fullName>Interest Group</fullName>
+        <default>false</default>
+        <label>Interest Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Management</fullName>
+        <default>false</default>
+        <label>Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Management Function</fullName>
+        <default>false</default>
+        <label>Management Function</label>
+    </customValue>
+    <customValue>
+        <fullName>Mandarin courses</fullName>
+        <default>false</default>
+        <label>Mandarin courses</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing &amp; Business Development</fullName>
+        <default>false</default>
+        <label>Marketing &amp; Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Negotiations</fullName>
+        <default>false</default>
+        <label>Negotiations</label>
+    </customValue>
+    <customValue>
+        <fullName>Operations Management</fullName>
+        <default>false</default>
+        <label>Operations Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Organizational : Human Capital</fullName>
+        <default>false</default>
+        <label>Organizational : Human Capital</label>
+    </customValue>
+    <customValue>
+        <fullName>Organizational Learning &amp; Change Transformation</fullName>
+        <default>false</default>
+        <label>Organizational Learning &amp; Change Transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Effectiveness &amp; Productivity</fullName>
+        <default>false</default>
+        <label>Personal Effectiveness &amp; Productivity</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Management</fullName>
+        <default>false</default>
+        <label>Project Management</label>
+    </customValue>
+    <customValue>
+        <fullName>RMIT Online</fullName>
+        <default>false</default>
+        <label>RMIT Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Management</fullName>
+        <default>false</default>
+        <label>Senior Management</label>
+    </customValue>
+    <customValue>
+        <fullName>SGUS</fullName>
+        <default>false</default>
+        <label>SGUS</label>
+    </customValue>
+    <customValue>
+        <fullName>Smoke Test Category</fullName>
+        <default>false</default>
+        <label>Smoke Test Category</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategy Execution</fullName>
+        <default>false</default>
+        <label>Strategy Execution</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategy Formulation</fullName>
+        <default>false</default>
+        <label>Strategy Formulation</label>
+    </customValue>
+    <customValue>
+        <fullName>System Thinking</fullName>
+        <default>false</default>
+        <label>System Thinking</label>
+    </customValue>
+    <customValue>
+        <fullName>Talent Development</fullName>
+        <default>false</default>
+        <label>Talent Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Talent Management</fullName>
+        <default>false</default>
+        <label>Talent Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Team : High Performance Team</fullName>
+        <default>false</default>
+        <label>Team : High Performance Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Team  Development</fullName>
+        <default>false</default>
+        <label>Team  Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Team Engagement</fullName>
+        <default>false</default>
+        <label>Team Engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>Team Leadership &amp; Interpersonal Skills</fullName>
+        <default>false</default>
+        <label>Team Leadership &amp; Interpersonal Skills</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology &amp; Security</fullName>
+        <default>false</default>
+        <label>Technology &amp; Security</label>
+    </customValue>
+    <customValue>
+        <fullName>The JO Series</fullName>
+        <default>false</default>
+        <label>The JO Series</label>
+    </customValue>
+    <customValue>
+        <fullName>Smoke Test 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Smoke Test 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Test Uat Category1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test Uat Category1</label>
+    </customValue>
+    <customValue>
+        <fullName>Smoke Category 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Smoke Category 1</label>
+    </customValue>
+    <description>Category for Courses</description>
+    <masterLabel>Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

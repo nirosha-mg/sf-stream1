@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SIM_PD_Case_Closure</fullName>
+        <description>SIM PD Case Closure</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Case_Closure</template>
+    </alerts>
+    <alerts>
+        <fullName>SIM_PD_Case_Warning</fullName>
+        <description>SIM PD Case Warning</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Case_Escalation_notification_SAMPLE</template>
+    </alerts>
+</Workflow>

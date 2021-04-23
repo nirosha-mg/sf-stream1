@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Public_Course_Runs</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Public Course Runs</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Public_Course__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Allow_R_W_for_SIM_Business_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Allow R/W for SIM Business Admin</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SIM_Read_Only_Read_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SIM Read Only Read Access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>IT_Ops</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

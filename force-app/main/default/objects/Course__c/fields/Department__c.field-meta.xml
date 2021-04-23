@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cost_Center__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Department</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>SM1040</controllingFieldValue>
+            <valueName>PM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AE1000</controllingFieldValue>
+            <valueName>ACD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SM1033</controllingFieldValue>
+            <valueName>CAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REPD</controllingFieldValue>
+            <valueName>EPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SM1034</controllingFieldValue>
+            <valueName>CAP</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

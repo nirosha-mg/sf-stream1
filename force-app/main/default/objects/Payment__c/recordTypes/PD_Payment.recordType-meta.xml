@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PD_Payment</fullName>
+    <active>true</active>
+    <description>MVP1.0</description>
+    <label>PD Payment</label>
+    <picklistValues>
+        <picklist>Payment_Mode__c</picklist>
+        <values>
+            <fullName>CASH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEQUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECARD</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>GIRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NETS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

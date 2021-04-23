@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Course_Run</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISPICKVAL(PRIORVALUE(Publish_Status__c), &quot;Submitted for Creation Review&quot;),
+ISPICKVAL(PRIORVALUE(Publish_Status__c), &quot;Pending Creation Review&quot;),
+ISPICKVAL(PRIORVALUE(Publish_Status__c), &quot;Submitted for Update Review&quot;),
+ISPICKVAL(PRIORVALUE(Publish_Status__c), &quot;Pending Update Review&quot;),
+ISPICKVAL(PRIORVALUE(Publish_Status__c), &quot;Submitted for Unpublish Review&quot;)), 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;Integration Profile&quot;,
+$Profile.Name &lt;&gt; &quot;B2C Learner&quot;,
+$Profile.Name &lt;&gt; &quot;B2B Learner&quot;,
+$Profile.Name &lt;&gt; &quot;B2B SPOC&quot;,NOT(ISCHANGED(Provider_Status__c)),
+NOT(ISCHANGED( Public_Course__c )))</errorConditionFormula>
+    <errorMessage>Record is locked and you are not allowed to change this record.</errorMessage>
+</ValidationRule>

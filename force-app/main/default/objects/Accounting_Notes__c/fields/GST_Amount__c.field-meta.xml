@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_Amount__c</fullName>
+    <externalId>false</externalId>
+    <label>GST Amount</label>
+    <summarizedField>Deduction__c.GST_Amount__c</summarizedField>
+    <summaryForeignKey>Deduction__c.Accounting_Notes__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

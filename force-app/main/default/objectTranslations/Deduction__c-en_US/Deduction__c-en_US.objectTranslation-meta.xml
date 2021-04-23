@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Note Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Note Details</value>
+    </caseValues>
+    <layouts>
+        <layout>Deduction Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Deductions</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoice Line Item</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Detail Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Invoice Line Item</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Detail</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Detail_with_Deductions</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

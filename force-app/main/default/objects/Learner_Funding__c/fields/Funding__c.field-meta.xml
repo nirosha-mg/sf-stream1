@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding__c</fullName>
+    <description>MVP 1.0 On selecting Skills Future Credit, you are confirming to be a Singapore Citizen who has attained 25 Years of age.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>On selecting Skills Future Credit, you are confirming to be a Singapore Citizen who has attained 25 Years of age.</inlineHelpText>
+    <label>Funding</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Funding</valueSetName>
+    </valueSet>
+</CustomField>

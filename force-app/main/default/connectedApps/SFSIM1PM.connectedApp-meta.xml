@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>robert.albert@ncs.com.sg</contactEmail>
+    <label>SFSIM1PM</label>
+    <oauthConfig>
+        <callbackUrl>https://simdigital--simstream1.lightning.force.com/</callbackUrl>
+        <consumerKey>3MVG9pcaEGrGRoTJgB9yCchpDlERLGiIsrlOFqmNvmvYfvGI7Xi977WChRH4XU.51zLnmYIDJZDkgSGUgTl5E</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

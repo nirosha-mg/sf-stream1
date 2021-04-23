@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Course Registration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Course Registrations</value>
+    </caseValues>
+    <layouts>
+        <layout>Community Course Registration Layout</layout>
+        <sections>
+            <label></label>
+            <section>Alternative Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Billing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Personal Employment Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Personal Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Secondary Contact Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Course Registration Layout</layout>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Alternative Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Billing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Certificate Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Course Registration Survey</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Personal Employment Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Personal Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>SPOC Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Master Course Registration</layout>
+        <sections>
+            <label></label>
+            <section>Billing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Info</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Create_Learner_User</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Generate_Invoice</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Send_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Stop_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Submit_Registration</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Course_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Master_Course_Registration</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>NRICValidation</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Conga_Composer_SIM_PD_eCertificate_Generation1</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Email_Cert</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Send_Email_to_Learner</name>
+    </webLinks>
+</CustomObjectTranslation>

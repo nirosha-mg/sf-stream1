@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competency_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>Competency Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+                <label>Advanced</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Team Leaders/Executives/Supervisors</fullName>
+                <default>false</default>
+                <label>Team Leaders/Executives/Supervisors</label>
+            </value>
+            <value>
+                <fullName>Managers</fullName>
+                <default>false</default>
+                <label>Managers</label>
+            </value>
+            <value>
+                <fullName>Senior Manager/Directors</fullName>
+                <default>false</default>
+                <label>Senior Manager/Directors</label>
+            </value>
+            <value>
+                <fullName>Operational</fullName>
+                <default>false</default>
+                <label>Operational</label>
+            </value>
+            <value>
+                <fullName>Supervisory</fullName>
+                <default>false</default>
+                <label>Supervisory</label>
+            </value>
+            <value>
+                <fullName>Managerial</fullName>
+                <default>false</default>
+                <label>Managerial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

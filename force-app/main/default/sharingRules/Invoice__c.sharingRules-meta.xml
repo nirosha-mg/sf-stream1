@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>SIM_PD_Invoice_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>MVP1.0</description>
+        <label>SIM PD Invoice Sharing Rule</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Invoice,Registration Invoice</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

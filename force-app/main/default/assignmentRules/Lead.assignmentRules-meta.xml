@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>SIM PD Lead Assignment Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>eileenkee@sim.edu.sg</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>PD Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Web_Form_Type__c</field>
+                <operation>equals</operation>
+                <value>SIM Brochure Form</value>
+            </criteriaItems>
+            <template>SIM_Email_Templates/SIM_PD_Leads_New_assignment_notification_SAMPLE</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

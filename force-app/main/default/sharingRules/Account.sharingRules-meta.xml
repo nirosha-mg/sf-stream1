@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Account_Sharing_Rule_SIM_Business_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>MVP1.0</description>
+        <label>Account Sharing Rule :  SIM Business Admin</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Person Account,B2C Learner,B2B Account,Training Organization,Instructor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Sharing_Rule_SIM_Sales_Admin</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>MVP1.0</description>
+        <label>Account Sharing Rule :  SIM Sales Admin</label>
+        <sharedTo>
+            <role>Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Person Account,B2C Learner,B2B Account,Training Organization,Instructor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

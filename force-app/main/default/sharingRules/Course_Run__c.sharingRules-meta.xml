@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Public_Course_Runs</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Public Course Runs</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Public_Course__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SIM_PD_Course_Run_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SIM PD Course Run Sharing Rule</label>
+        <sharedTo>
+            <role>Business_Ops</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>SIM_PD_Course_Run_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SIM PD Course Run Sharing Rule</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

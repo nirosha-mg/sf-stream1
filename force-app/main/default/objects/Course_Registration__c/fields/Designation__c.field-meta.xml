@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Designation__c</fullName>
+    <externalId>false</externalId>
+    <label>Designation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultural and Fishery Workers</fullName>
+                <default>false</default>
+                <label>Agricultural and Fishery Workers</label>
+            </value>
+            <value>
+                <fullName>Associate Professionals and Technicians</fullName>
+                <default>false</default>
+                <label>Associate Professionals and Technicians</label>
+            </value>
+            <value>
+                <fullName>Cleaners, Labourers and Related Workers</fullName>
+                <default>false</default>
+                <label>Cleaners, Labourers and Related Workers</label>
+            </value>
+            <value>
+                <fullName>Clerical Workers</fullName>
+                <default>false</default>
+                <label>Clerical Workers</label>
+            </value>
+            <value>
+                <fullName>Legislators, Senior Officials and Managers</fullName>
+                <default>false</default>
+                <label>Legislators, Senior Officials and Managers</label>
+            </value>
+            <value>
+                <fullName>Plan and Machine Operators and Assemblers</fullName>
+                <default>false</default>
+                <label>Plan and Machine Operators and Assemblers</label>
+            </value>
+            <value>
+                <fullName>Production Craftsmen &amp; Related Workers</fullName>
+                <default>false</default>
+                <label>Production Craftsmen &amp; Related Workers</label>
+            </value>
+            <value>
+                <fullName>Professionals</fullName>
+                <default>false</default>
+                <label>Professionals</label>
+            </value>
+            <value>
+                <fullName>Service Workers and Shop and Market Sales Workers</fullName>
+                <default>false</default>
+                <label>Service Workers and Shop and Market Sales Workers</label>
+            </value>
+            <value>
+                <fullName>Workers not classifed by Occupation</fullName>
+                <default>false</default>
+                <label>Workers not classifed by Occupation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

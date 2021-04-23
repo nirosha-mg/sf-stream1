@@ -1,0 +1,8 @@
+<apex:page controller="eCertController" showHeader="false" applyHtmlTag="false"  >
+    <head>
+        <style>
+            @page { margin: 0in; size: 8.25in 11.75in; }
+        </style>
+    </head>
+        <apex:outputText escape="false" value="{!emailTemplate}"></apex:outputText>
+</apex:page>

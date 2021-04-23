@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>MVP1.0 Course Survey (Anonymous)</description>
+    <label>Course Survey Anonymous</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>3</minorNumber>
+        <namespace>enqr</namespace>
+    </packageVersions>
+</ApexPage>

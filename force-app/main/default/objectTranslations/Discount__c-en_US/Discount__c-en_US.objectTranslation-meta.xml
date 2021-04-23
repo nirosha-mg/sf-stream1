@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Discount</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Discounts</value>
+    </caseValues>
+    <layouts>
+        <layout>Discount Layout</layout>
+        <sections>
+            <label></label>
+            <section>CMS Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Terms &amp; Conditions</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Early Bird Layout</layout>
+        <sections>
+            <label></label>
+            <section>CMS Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Terms &amp; Conditions</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Submit_to_CMS</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>Early_Bird</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Promotion</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Amount_has_to_be_Positive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Lock_Course_Discount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Percentage_Discount</name>
+    </validationRules>
+</CustomObjectTranslation>

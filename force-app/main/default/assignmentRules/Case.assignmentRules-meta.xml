@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Call Centre</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Case_Admin</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <template>SIM_Email_Templates/SIM_PD_Case_New_assignment_notification</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

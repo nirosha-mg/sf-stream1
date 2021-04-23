@@ -1,0 +1,197 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,force:hasRecordId,force:lightningQuickActionWithoutHeader"  controller="B2BCourseRegistrationController" access="global">
+    
+    <!-- Variable attributes Start -->
+    <aura:attribute name="AccountRecordType" 			    type="String" default="B2B Account"/>
+    <aura:attribute name="UserProfile" 			    		type="String" default="B2B Spoc"/>
+    <aura:attribute name="UserIsActive" 			        type="boolean" default="true"/>
+    
+    <aura:attribute name="SelectedUserId" 			        type="String"/>
+    <aura:attribute name="CourseName" 					    type="String"/>
+    <aura:attribute name="CourseStartDate" 					type="String"/>
+    <aura:attribute name="CourseEndDate"   					type="String"/>
+    <aura:attribute name="source"   						type="boolean" />
+    <aura:attribute name="courseruncode"   					type="String" />
+    <aura:attribute name="Dubcourseruncode"   			    type="String" />
+    <aura:attribute name="accid"   					    	type="String" />
+    <aura:attribute name="searchAccountId"   			    type="String"/>
+    <aura:attribute name="searchContactId"   			    type="String"/>
+    <aura:attribute name="ContactId"   			    		type="String"/>
+    <aura:attribute name="AccountNullCheck" 				type="boolean" default="false"/>
+    <aura:attribute name="ContactNullCheck"      		    type="boolean" default="false"/>
+    <aura:attribute name="courseRunRecord" 					type="Course_Run__c"/>
+    <aura:attribute name="AccountName" 			        	type="String"/>
+    <aura:attribute name="ContactName" 			        	type="String"/>
+    <aura:attribute name="MasterCoursRegistrationid" 		type="String"/>
+    <aura:attribute name="courserunId" 						type="String"/>
+    <aura:attribute name="isRedirectFromMainScreen" 	    type="boolean" default="false"/>
+    
+   
+    <aura:attribute name="CourseId" 						type="String"/>
+    <aura:attribute name="courseRunStartDate" 				type="String"/>
+    <!-- Variable attributes End -->
+    
+    <!-- Auro handler attributes Start -->
+    <aura:handler name="init"   value="{!this}"       action="{!c.OnInit}" />
+    <aura:handler name="change" value="{!v.searchAccountId}" action="{!c.AccountItemsChange}"/>
+    <aura:handler name="change" value="{!v.searchContactId}" action="{!c.ContactItemsChange}"/>
+    <!-- Auro handler attributes End -->
+    
+    <!-- In line Css for toast Message Start -->
+    <aura:html tag="style">
+        .toastMessage.forceActionsText{
+        white-space : pre-line !important;
+        }
+        .slds-modal__container{
+        width: 40% !important;
+        max-width: 40% !important;
+        }
+    </aura:html>
+    <!-- In line Css for toast Message End -->
+    <div>
+        <div class="slds-size--2-of-12"></div>
+        <div class="slds-size--8-of-12" style="margin-left: 16%;">
+            
+            <aura:if isTrue="{!(empty(v.courseruncode))}"> 
+                <lightning:card >
+                    
+                    <div>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_4-of-12">
+                                
+                            </div>
+                            <div class="slds-col slds-size_4-of-12" style="text-align: center;">
+                                <span style="font-weight:bold;font-size:18px;">Bulk Registration</span>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12"> 
+                            </div>
+                        </div>
+                        
+                        <br/><br/><br/>
+                        <div class="slds-grid slds-gutters" style="margin-left: -1%;">
+                            <div class="slds-col slds-size_3-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12">
+                                Course
+                            </div>
+                            <div class="slds-col slds-size_7-of-12">
+                                {!v.CourseName}
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="slds-grid slds-gutters"  style="margin-left: -1%;">
+                            <div class="slds-col slds-size_3-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12">
+                                Date
+                            </div>
+                            <div class="slds-col slds-size_7-of-12" >
+                                {!v.CourseStartDate} - {!v.CourseEndDate}
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_3-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12">
+                                B2B Account
+                            </div>
+                            <div class="slds-col slds-size_5-of-12">
+                                <c:LookupForCourseRegistration
+                                                                      object="Account"
+                                                                      searchField="Name"
+                                                                      placeholder="Select Account"
+                                                                      iconName="standard:account"
+                                                                      order="Name"                     
+                                                                      aura:id="AccId"
+                                                                      showRecentRecords = "true"
+                                                                      loadingMessage="Loading..."
+                                                                      errorMessage="Invalid input"
+                                                                      filter="{!'RecordType.Name = \'' + v.AccountRecordType + '\''}"
+                                                                      value="{!v.searchAccountId}"
+                                                                      />
+                            </div>
+                            <div class="slds-col slds-size_2-of-12"></div>
+                        </div>
+                        <br/>                    
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_3-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12">
+                                SPOC
+                            </div>
+                            <div class="slds-col slds-size_5-of-12">
+                                <c:LookupForCourseRegistration
+                                                                      object="User"
+                                                                      searchField="Name"
+                                                                      placeholder="Select Spoc"
+                                                                      iconName="standard:account"
+                                                                      order="Name"                     
+                                                                      aura:id="ConId"
+                                                                      showRecentRecords = "true"
+                                                                      loadingMessage="Loading..."
+                                                                      errorMessage="Invalid input"
+                                                                      filter="{!'AccountId = \'' + v.accid + '\' AND profile.Name = \'' + v.UserProfile + '\'  AND IsActive =true'}"
+                                                                      label=""
+                                                                      value="{!v.searchContactId}"
+                                                                      />
+                            </div>
+                            <div class="slds-col slds-size_2-of-12"></div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="slds-float--right slds-no-flex" style="margin-top: -3%;margin-right: 2%;">
+                        <lightning:button variant="brand" type="submit" name="next" label="Next" onclick="{!c.handleNext}"/>
+                    </div>
+                    <br/>
+                    <aura:if isTrue="{!v.AccountNullCheck}">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">  
+                                
+                                <header class="slds-modal__header">
+                                    <lightning:buttonIcon iconName="utility:close"
+                                                          onclick="{! c.closeAccountModel }"
+                                                          alternativeText="close"
+                                                          variant="bare-inverse"
+                                                          class="slds-modal__close"/> 
+                                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                        Account 
+                                    </h2>
+                                </header> 
+                                <!-- MODAL BOX BODY Part Start -->
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationAccountForPEMsg} </p>
+                                </div>
+                                
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div> 
+                    </aura:if> 
+                    
+                    <aura:if isTrue="{!v.ContactNullCheck}">
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">  
+                                <header class="slds-modal__header">
+                                    <lightning:buttonIcon iconName="utility:close"
+                                                          onclick="{! c.closeContactModel }"
+                                                          alternativeText="close"
+                                                          variant="bare-inverse"
+                                                          class="slds-modal__close"/> 
+                                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                        Spoc
+                                    </h2>
+                                </header> 
+                                <!-- MODAL BOX BODY Part Start -->
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationSpocForPEMsg} </p>
+                                </div>                   
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div> 
+                    </aura:if> 
+                </lightning:card>
+            </aura:if>
+            
+        </div>  
+        <div class="slds-size--2-of-12"></div>
+        <aura:if isTrue="{!not(empty(v.courseruncode))}">
+            <c:B2Bcourseregistration courseRunCode = "{!v.courseruncode}" courserunIdPE="{!v.courserunId}" searchContactPE="{!v.ContactId}" SelectedUserId="{!v.SelectedUserId}" AccountName="{!v.AccountName}"  ContactName="{!v.ContactName}" courseRegPEId="{!v.MasterCoursRegistrationid}" AccountIdPE="{!v.accid}"  CourseIdPE="{!v.CourseId}"  courseRunStartDatePE="{!v.courseRunStartDate}" source="true"/>
+        </aura:if>
+    </div>
+</aura:component>

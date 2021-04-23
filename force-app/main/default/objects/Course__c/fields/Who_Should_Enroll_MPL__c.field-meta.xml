@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Who_Should_Enroll_MPL__c</fullName>
+    <externalId>false</externalId>
+    <label>Who Should Enrol</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Level 1 - Admin &amp; Support</fullName>
+                <default>false</default>
+                <label>Level 1 - Admin &amp; Support</label>
+            </value>
+            <value>
+                <fullName>Level 2 - Supervisor, Executive, &amp; Emerging Managers</fullName>
+                <default>false</default>
+                <label>Level 2 - Supervisor, Executive, &amp; Emerging Managers</label>
+            </value>
+            <value>
+                <fullName>Level 3 - New Managers</fullName>
+                <default>false</default>
+                <label>Level 3 - New Managers</label>
+            </value>
+            <value>
+                <fullName>Level 4 - Managers</fullName>
+                <default>false</default>
+                <label>Level 4 - Managers</label>
+            </value>
+            <value>
+                <fullName>Level 5 - Senior Managers &amp; Directors</fullName>
+                <default>false</default>
+                <label>Level 5 - Senior Managers &amp; Directors</label>
+            </value>
+            <value>
+                <fullName>Level 6 - C-Suite</fullName>
+                <default>false</default>
+                <label>Level 6 - C-Suite</label>
+            </value>
+            <value>
+                <fullName>(Level 1)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(Level 1)</label>
+            </value>
+            <value>
+                <fullName>(Level 2)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(Level 2)</label>
+            </value>
+            <value>
+                <fullName>(Level 3)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>(Level 3)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

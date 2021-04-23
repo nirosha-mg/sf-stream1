@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Courses</fullName>
+    <columns>NAME</columns>
+    <columns>Course_Code__c</columns>
+    <columns>Course_Type__c</columns>
+    <columns>Mode_Of_Study__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>AccountId__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Corporate Courses</label>
+</ListView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Registration__c</fullName>
+    <externalId>false</externalId>
+    <label>Course Registration</label>
+    <referenceTo>Course_Registration__c</referenceTo>
+    <relationshipLabel>Learner Fundings</relationshipLabel>
+    <relationshipName>Learner_Fundings</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

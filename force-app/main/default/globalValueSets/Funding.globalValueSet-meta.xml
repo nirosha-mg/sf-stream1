@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SkillsFuture Credit</fullName>
+        <default>false</default>
+        <label>SkillsFuture Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>SkillsFuture Funding</fullName>
+        <default>false</default>
+        <label>SkillsFuture Funding</label>
+    </customValue>
+    <customValue>
+        <fullName>UTAP Funding</fullName>
+        <default>false</default>
+        <label>UTAP Funding</label>
+    </customValue>
+    <customValue>
+        <fullName>Test Value</fullName>
+        <default>false</default>
+        <label>Test Value</label>
+    </customValue>
+    <customValue>
+        <fullName>IBF Funding</fullName>
+        <default>false</default>
+        <label>IBF Funding</label>
+    </customValue>
+    <masterLabel>Funding</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

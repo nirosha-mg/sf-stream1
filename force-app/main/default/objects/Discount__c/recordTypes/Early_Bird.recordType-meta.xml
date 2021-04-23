@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Early_Bird</fullName>
+    <active>true</active>
+    <label>Early Bird</label>
+    <picklistValues>
+        <picklist>GST_Code__c</picklist>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publish_Status__c</picklist>
+        <values>
+            <fullName>Creation Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Published</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Unpublish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublish Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Call out Failure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

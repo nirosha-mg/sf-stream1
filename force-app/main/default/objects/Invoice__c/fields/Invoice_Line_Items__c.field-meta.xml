@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Line_Items__c</fullName>
+    <description>(MVP 1.0) - Number of related Invoice Line Items</description>
+    <externalId>false</externalId>
+    <label>Invoice Line Items</label>
+    <summaryForeignKey>Invoice_Line_Item__c.Invoice__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

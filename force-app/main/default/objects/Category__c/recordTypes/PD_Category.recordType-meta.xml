@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PD_Category</fullName>
+    <active>true</active>
+    <description>MVP1.0</description>
+    <label>PD Category</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Agile At Scale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artificial Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business %26 Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Insight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CX %26 UX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Spoken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Written</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex Adaptive Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creativity %26 Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design Thinking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Practices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Transformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disruptive Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employability Skills System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events %26 Conferences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evergreen Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance %26 Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Management %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual %3A Social %26 Self Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovation Ecosystem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Function</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandarin courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing %26 Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational %3A Human Capital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational Learning %26 Change Transformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Effectiveness %26 Productivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMIT Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Formulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Thinking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talent Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talent Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team  Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team %3A High Performance Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Leadership %26 Interpersonal Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology %26 Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The JO Series</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publish_Status__c</picklist>
+        <values>
+            <fullName>Creation Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Published</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Unpublish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublish Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Call out Failure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Line_Items__c</fullName>
+    <description>No of deductions made to this Debit Note/Refund</description>
+    <externalId>false</externalId>
+    <label>Related Line Items</label>
+    <summaryForeignKey>Deduction__c.Accounting_Notes__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

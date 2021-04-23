@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Designation_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>Designation Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Top Management</fullName>
+                <default>false</default>
+                <label>Top Management</label>
+            </value>
+            <value>
+                <fullName>Senior Management</fullName>
+                <default>false</default>
+                <label>Senior Management</label>
+            </value>
+            <value>
+                <fullName>Middle Management</fullName>
+                <default>false</default>
+                <label>Middle Management</label>
+            </value>
+            <value>
+                <fullName>Junior Management</fullName>
+                <default>false</default>
+                <label>Junior Management</label>
+            </value>
+            <value>
+                <fullName>Non-Managerial Professional/ Technical Executive</fullName>
+                <default>false</default>
+                <label>Non-Managerial Professional/ Technical Executive</label>
+            </value>
+            <value>
+                <fullName>Non-Executive Staff</fullName>
+                <default>false</default>
+                <label>Non-Executive Staff</label>
+            </value>
+            <value>
+                <fullName>Sole Proprietor</fullName>
+                <default>false</default>
+                <label>Sole Proprietor</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

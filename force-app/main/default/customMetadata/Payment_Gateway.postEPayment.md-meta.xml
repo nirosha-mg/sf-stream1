@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>postEPayment</label>
+    <protected>false</protected>
+    <values>
+        <field>Payment_Gateway_Return_URL__c</field>
+        <value xsi:type="xsd:string">https://dev.api.sim.edu.sg/x-epayment-gw-v1/api/payment-transactions?</value>
+    </values>
+    <values>
+        <field>Payment_Gateway_URL__c</field>
+        <value xsi:type="xsd:string">https://epaymentuat.simge.edu.sg/payment.do</value>
+    </values>
+    <values>
+        <field>Self_Signed_Cert_Name__c</field>
+        <value xsi:type="xsd:string">sim_digital_self_signed_0001</value>
+    </values>
+</CustomMetadata>

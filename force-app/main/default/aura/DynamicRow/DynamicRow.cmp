@@ -1,0 +1,93 @@
+<aura:component controller="CourseRegistrationController" Implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="fundingList" type="Learner_Funding__c[]"/>    
+    <aura:attribute name="options" type="List"/>
+    <aura:attribute name="courseId" type="Id"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:registerEvent name="FundingListEvent" type="c:FundingListEvent" />
+    <aura:attribute name="FundingModalOpen" type="boolean" default="false"/> 
+    
+    <div class="slds-m-around--xx-large">
+        <aura:if isTrue="{!v.FundingModalOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">  
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeFundingModel}"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                            Funding Information Incomplete
+                        </h2>
+                    </header> 
+                    <!-- MODAL BOX BODY Part Start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p style="font-weight:normal;">Please enter the amount of funding to avail
+                        </p>
+                    </div>                   
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div> 
+        </aura:if>
+        <div class="slds-float_right slds-p-bottom_small">
+            <h3><b> Add Learner Funding  </b>
+                <lightning:buttonIcon iconName="utility:add"  size="large" variant="bare" alternativeText="Add" onclick="{!c.addRow}"/>
+            </h3>
+        </div>
+        <div class="container-fluid">        
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">S.No</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Funding">Funding</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Amount">Amount</div>
+                        </th>
+                    </tr>
+                </thead>   
+                <tbody>      
+                    <aura:iteration items="{!v.fundingList}" var="eachFunding" indexVar="index">
+                        <tr>
+                            <td> 
+                                {!index + 1}
+                            </td>
+                            <td>
+                              <!--  <lightning:select name="funding" label="Funding" value="{!eachFunding.Funding__c}" onchange="{!c.sendFundingList}">
+                                    <option value="SkillsFuture Credit">SkillsFuture Credit</option>
+                                    <option value="SkillsFuture Funding	">SkillsFuture Funding</option>
+                                </lightning:select> -->
+                               <lightning:select aura:id="InputSelectDynamic" name="funding" label="Funding" value="{!eachFunding.Funding__c}" onchange="{!c.sendFundingList}">                                   
+                                	<aura:iteration items="{!v.options}" var="option">
+                                        <option value="{!option}">{!option}</option>
+                                    </aura:iteration> 
+                                </lightning:select> 
+                            </td>
+                            <td>
+                                <aura:if isTrue="{!eachFunding.Funding__c == 'SkillsFuture Credit'}">
+                                    <lightning:input type="number" name="Amount"  value="{!eachFunding.Amount__c}" onchange="{!c.sendFundingList}"  label="Amount" />
+                                </aura:if>
+                                <aura:if isTrue="{!eachFunding.Funding__c != 'SkillsFuture Credit'}">
+                                    Funding Amount not required to be specified
+                                </aura:if>
+                            </td>
+                            <td>
+                                <a onclick="{!c.removeRow}" data-record="{!index}">
+                                    <lightning:icon iconName="utility:delete" size="small" alternativeText="Delete"/>
+                                    <span class="slds-assistive-text">Delete</span>
+                                </a>
+                            </td> 
+                        </tr>
+                        
+                    </aura:iteration>
+                </tbody>
+            </table>
+            <!-- <div class="slds-align_absolute-center slds-p-top_small">
+                <lightning:button variant="brand" label="Submit" title="Brand action" onclick="{!c.save}" />
+            </div> -->
+        </div>
+    </div>
+</aura:component>

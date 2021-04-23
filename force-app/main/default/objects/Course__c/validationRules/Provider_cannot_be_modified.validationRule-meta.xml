@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_cannot_be_modified</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISPICKVAL( Provider_Status__c , &quot;Draft&quot;)),ISCHANGED( Provider__c))</errorConditionFormula>
+    <errorMessage>Course has been published to this provider and Provider can’t be changed after this operation.</errorMessage>
+</ValidationRule>

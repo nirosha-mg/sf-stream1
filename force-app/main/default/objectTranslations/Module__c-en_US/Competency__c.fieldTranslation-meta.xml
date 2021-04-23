@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Competency__c</name>
+    <picklistValues>
+        <masterLabel>Analytical, Conceptual and Evaluative Skills (ACE)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interpersonal Skills (IP)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Management &amp; Development Skills (PMD)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategy Execution</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

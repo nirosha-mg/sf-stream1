@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>No Formal Qualification &amp; Lower Primary</fullName>
+        <default>false</default>
+        <label>No Formal Qualification &amp; Lower Primary</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary PSLE</fullName>
+        <default>false</default>
+        <label>Primary PSLE</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Lower Secondary</fullName>
+        <default>false</default>
+        <label>Lower Secondary</label>
+    </customValue>
+    <customValue>
+        <fullName>&quot;N&quot; Level or equivalent</fullName>
+        <default>false</default>
+        <label>&quot;N&quot; Level or equivalent</label>
+    </customValue>
+    <customValue>
+        <fullName>&quot;O&quot; Level or equivalent</fullName>
+        <default>false</default>
+        <label>&quot;O&quot; Level or equivalent</label>
+    </customValue>
+    <customValue>
+        <fullName>ITE Skills Certification (ISC)</fullName>
+        <default>false</default>
+        <label>ITE Skills Certification (ISC)</label>
+    </customValue>
+    <customValue>
+        <fullName>A Level or equivalent</fullName>
+        <default>false</default>
+        <label>A Level or equivalent</label>
+    </customValue>
+    <customValue>
+        <fullName>NITEC/Post Nitec</fullName>
+        <default>false</default>
+        <label>NITEC/Post Nitec</label>
+    </customValue>
+    <customValue>
+        <fullName>Higher NITEC</fullName>
+        <default>false</default>
+        <label>Higher NITEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Master NITEC</fullName>
+        <default>false</default>
+        <label>Master NITEC</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Certificate</fullName>
+        <default>false</default>
+        <label>WSQ Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Higher Certificate</fullName>
+        <default>false</default>
+        <label>WSQ Higher Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>Polytechnic Diploma</fullName>
+        <default>false</default>
+        <label>Polytechnic Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Qualification &amp; Other Diploma</fullName>
+        <default>false</default>
+        <label>Professional Qualification &amp; Other Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Advance Certificate</fullName>
+        <default>false</default>
+        <label>WSQ Advance Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Diploma</fullName>
+        <default>false</default>
+        <label>WSQ Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Special Diploma</fullName>
+        <default>false</default>
+        <label>WSQ Special Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>University First Degree</fullName>
+        <default>false</default>
+        <label>University First Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>University Post-graduate Diploma &amp; Degree/Master/Doctorate</fullName>
+        <default>false</default>
+        <label>University Post-graduate Diploma &amp; Degree/Master/Doctorate</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Graduate Certificate</fullName>
+        <default>false</default>
+        <label>WSQ Graduate Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>WSQ Graduate Diploma</fullName>
+        <default>false</default>
+        <label>WSQ Graduate Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Reported</fullName>
+        <default>false</default>
+        <label>Not Reported</label>
+    </customValue>
+    <masterLabel>Education Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

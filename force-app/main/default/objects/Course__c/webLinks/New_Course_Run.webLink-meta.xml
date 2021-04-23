@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Course_Run</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>New Course Run</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/lightning/o/Course_Run__c/new?defaultFieldValues=
+Name={!URLENCODE( Course__c.Name )},
+Fee_Code__c={!Course__c.Fee_Code__c},
+Cost_Center__c={!Course__c.Cost_Center__c},
+Department__c={!Course__c.Department__c},
+Certificate_Course_Name__c={!URLENCODE( Course__c.Course_Title__c )},
+Course__c={!Course__c.Id}</url>
+</WebLink>

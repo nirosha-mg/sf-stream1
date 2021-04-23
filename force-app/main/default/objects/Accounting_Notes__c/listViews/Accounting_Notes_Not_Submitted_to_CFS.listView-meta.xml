@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounting_Notes_Not_Submitted_to_CFS</fullName>
+    <columns>NAME</columns>
+    <columns>Note_Type__c</columns>
+    <columns>Submitter__c</columns>
+    <columns>Submitter_Date__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Internal_Approval_Status__c</columns>
+    <columns>Status__c</columns>
+    <columns>Request_No__c</columns>
+    <columns>Reference_No__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Internal_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Draft,Callout Failure</value>
+    </filters>
+    <label>Accounting Notes Not Submitted to CFS</label>
+</ListView>

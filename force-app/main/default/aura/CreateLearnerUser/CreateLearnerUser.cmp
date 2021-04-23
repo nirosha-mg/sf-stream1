@@ -1,0 +1,107 @@
+<aura:component controller="createLearnerUserClass" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.initialize}"/>
+    <aura:attribute name="recordId" type="string" />
+    <aura:attribute name="isUserToBeCreated" type="boolean" default="false"/>
+    <!-- store the resopone wrapper -->
+    <aura:attribute name="responseWrapper" type="object"/>
+    <aura:attribute name="MessageReturn" type="string"/>
+    <!-- attribute to store the email -->
+    <aura:attribute name="Email" type="string"/>
+    <!-- attribute to store the userName -->
+    <aura:attribute name="userName" type="string"/>
+    <aura:attribute name="SuccessuserExistWithContactId" type="boolean" default="false"/>
+     <!-- loader attribute -->
+    <aura:attribute name="showSpinner" type="boolean" default="false"/>
+    <!-- defined to capture the error-->
+    <aura:attribute name="isError" type="string" default=""/>
+    <aura:attribute name="Msg" type="string"/>
+    <!-- CSS defined for the header and footer custom -->
+    <aura:html tag="style">
+        .slds-p-around–medium {
+            padding: 0rem !important;
+        }
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height:unset !important;
+            max-height:unset !important;
+            padding: 1%;
+        }
+        .cuf-content {
+        	padding: 0 0rem !important;
+        }
+        .slds-card__body{
+        	padding: 2% !important;
+        }
+    </aura:html>
+    <!-- spinner defined -->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" />
+    </aura:if>
+    <!-- Header -->
+        <div class="modal-header slds-modal__header slds-size_1-of-1">
+            <h4 class="title slds-text-heading–medium">Create Learner User</h4>
+        </div>
+        <!-- /Header -->
+    <lightning:card title="">
+        <!-- Body -->
+        <aura:if isTrue="{! v.isError=='Fail'}">
+                <p style="text-align: center;"><b>
+                    {! v.Msg }
+                    </b>
+                </p>
+        </aura:if>
+        <aura:if isTrue="{! v.isError=='Success'}">
+                <p style="text-align: center;"><b>
+                    {! v.Msg }
+                    </b>
+                </p>
+        </aura:if>
+        <aura:if isTrue="{!v.isUserToBeCreated}">
+                <p style="text-align: center;"><b>
+                    {! v.MessageReturn }
+                    </b>
+                </p>
+        </aura:if>
+            <aura:if isTrue="{!v.SuccessuserExistWithContactId}">
+                <p><b>
+                    {! v.MessageReturn }
+                    </b>
+                </p>
+                <br/>
+                <table id="tableId" class="slds-table" cellspacing="0" style="width: 24%;">
+                    <thead></thead>
+                    <tbody> 
+                        <tr class="">
+                            <td scope="col" class="slds-cell-th paddingLeft" title="Email" style="width: 14%!important;">
+                                <div  class="slds-truncate" style="font-weight:bold;">Email</div>
+                            </td>
+                            <td scope="col" class="slds-cell-th" title="Email" style="width: 4%!important;">
+                                <div  class="slds-truncate" style="font-weight:bold;">{! v.Email}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Username" class="slds-cell-th paddingLeft" title="Username">
+                                <div class="slds-truncate" style="font-weight:bold;">
+                                    Username
+                                </div>
+                            </td>
+                            <td data-label="Username" title="Username">
+                                <div class="slds-truncate" style="font-weight:bold;">
+                                    {!v.userName}
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aura:if>
+        <!-- /Body -->   
+    </lightning:card>
+    <!-- footer -->
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <aura:if isTrue="{! and(!v.isUserToBeCreated,v.isError == '')}">
+                <lightning:button variant="Brand" class="slds-button" label="Confirm" onclick="{!c.handleSave}"/>
+            </aura:if>
+            <lightning:button variant="Neutral" class="slds-button" label="Cancel" onclick="{!c.handleExit}"/>
+        </div>
+        <!-- /footer -->
+</aura:component>

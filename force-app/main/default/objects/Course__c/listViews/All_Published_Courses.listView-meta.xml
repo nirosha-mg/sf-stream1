@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Published_Courses</fullName>
+    <columns>NAME</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Course_Title__c</columns>
+    <columns>Member_Fee__c</columns>
+    <columns>Non_Member_Fee__c</columns>
+    <columns>Course_Code__c</columns>
+    <columns>Publish_Status__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Mode_Of_Study__c</columns>
+    <columns>Course_Type__c</columns>
+    <columns>Provider__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Publish_Status__c</field>
+        <operation>equals</operation>
+        <value>Published</value>
+    </filters>
+    <label>All - Published Courses</label>
+</ListView>

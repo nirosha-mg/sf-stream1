@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_Exists_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Exists Message</shortDescription>
+        <value>Account already exists.</value>
+    </labels>
+    <labels>
+        <fullName>AmountFundedCourseMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AmountFundedCourseMsg</shortDescription>
+        <value>Amount should not be more than payable amount</value>
+    </labels>
+    <labels>
+        <fullName>AmountFundingErrorHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AmountFundingErrorHeader</shortDescription>
+        <value>Invalid funding amount</value>
+    </labels>
+    <labels>
+        <fullName>AmountNonFundedCourseMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AmountNonFundedCourseMsg</shortDescription>
+        <value>Amount should not be more than payable amount</value>
+    </labels>
+    <labels>
+        <fullName>B2B_BillingAddressMesssage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_BillingAddressMesssage</shortDescription>
+        <value>Please reach out to your Company&apos;s Contact Person to update the billing information</value>
+    </labels>
+    <labels>
+        <fullName>CMS_Thumbnail_Not_Available</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CMS Thumbnail Not Available</shortDescription>
+        <value>Please upload a thumbnail for this record using the &quot;Upload File to CMS&quot; button</value>
+    </labels>
+    <labels>
+        <fullName>Category_Not_Published</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Category Not Published</shortDescription>
+        <value>This Category has not yet been published.
+
+Please tick the Active field to publish changes to this record</value>
+    </labels>
+    <labels>
+        <fullName>Community_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community URL</shortDescription>
+        <value>https://simstream1-simdigital.cs113.force.com</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationAcceptMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationAcceptMsg</shortDescription>
+        <value>Please accept the declaration before register</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationAccountForPEMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationAccountForPEMsg</shortDescription>
+        <value>Please Select the Account</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationCompletePE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationCompletePE</shortDescription>
+        <value>Course Registration completed successfully</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationContactnumberNullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationContactnumberNullMsg</shortDescription>
+        <value>Contact number should not be null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationCsvImportMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationCsvImportMsg</shortDescription>
+        <value>CSV file has been imported Successful.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationCsvIsNullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationCsvIsNullMsg</shortDescription>
+        <value>Please upload the file.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationDateOfBirthGreaterorLessMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationDateOfBirthGreaterorLessMsg</shortDescription>
+        <value>Birthday date should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationDateOfBirthInvalidFormateMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationDateOfBirthInvalidFormateMsg</shortDescription>
+        <value>invalid Date formate.we support dd/mm/yyyy only.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationDateOfBirthNullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationDateOfBirthNullMsg</shortDescription>
+        <value>Date should not be greater then today date</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationDeclineMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationDeclineMsg</shortDescription>
+        <value>Please Accept &amp; Proceed</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationDuplicateMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationDuplicateMsg</shortDescription>
+        <value>The record already exists in the below table</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationFirstnameMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationFirstnameMsg</shortDescription>
+        <value>First name should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationGenderMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationGenderMsg</shortDescription>
+        <value>Gender should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationInsertMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationInsertMsg</shortDescription>
+        <value>Record Insert in table Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationInvalidEmailMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationInvalidEmailMsg</shortDescription>
+        <value>invalid email</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationInvalidHeaderMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationInvalidHeaderMsg</shortDescription>
+        <value>Invalid header in CSV file or you have uploaded the wrong file.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationInvalidNRICTypeMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationInvalidNRICTypeMsg</shortDescription>
+        <value>invalid NRIC Type number</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationLastnameMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationLastnameMsg</shortDescription>
+        <value>Last name  should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationNRICnumberNullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationNRICnumberNullMsg</shortDescription>
+        <value>NRIC number should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationNullEmailMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationNullEmailMsg</shortDescription>
+        <value>email should not be null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationPDPANullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationPDPANullMsg</shortDescription>
+        <value>PDPA Consent Clause should be True</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationPreferredCertificateMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationPreferredCertificateMsg</shortDescription>
+        <value>Preferred Certificate Name  should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationPromoCodeNullMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationPromoCodeNullMsg</shortDescription>
+        <value>Invalid Promo Code</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationSalutation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationSalutation</shortDescription>
+        <value>Salutation should not null</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationSaveAsDraftMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationSaveAsDraftMsg</shortDescription>
+        <value>Course Registration saved successfully</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationSpocForPEMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationSpocForPEMsg</shortDescription>
+        <value>Please Select the Spoc</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationUpdateMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationUpdateMsg</shortDescription>
+        <value>Record Update Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistration_DraftMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistration_DraftMsg</shortDescription>
+        <value>Course Registration with Draft is created successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistration_ExecutiveMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistration_ExecutiveMsg</shortDescription>
+        <value>Your registration has been submitted and our Program Executive will contact you shortly for the next steps</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistration_InactiveMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistration_InactiveMsg</shortDescription>
+        <value>Course is currently unavailable for registration</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistration_Payment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistration_Payment</shortDescription>
+        <value>Would you like to proceed for payment now?</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationduplicateEmailMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationduplicateEmailMsg</shortDescription>
+        <value>This user email already exists</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationinvalidDesignationMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationinvalidDesignationMsg</shortDescription>
+        <value>invalid Designation Level Type</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationinvalidEmploymentMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationinvalidEmploymentMsg</shortDescription>
+        <value>invalid Employment Status Type</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationinvalidNRICnumberMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationinvalidNRICnumberMsg</shortDescription>
+        <value>invalid NRIC number</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationinvalidNationalityMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationinvalidNationalityMsg</shortDescription>
+        <value>invalid Nationality Type</value>
+    </labels>
+    <labels>
+        <fullName>CourseRegistrationpdpaMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRegistrationpdpaMsg</shortDescription>
+        <value>Please accept the pdpa before register</value>
+    </labels>
+    <labels>
+        <fullName>CourseRunNotPublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRunNotPublished</shortDescription>
+        <value>This Course Run has not yet been published.
+
+Please tick the Active field to publish changes to this record</value>
+    </labels>
+    <labels>
+        <fullName>CourseRun_Invalid_Provider_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CourseRun_Invalid_Provider_Message</shortDescription>
+        <value>Invalid Provider</value>
+    </labels>
+    <labels>
+        <fullName>Course_Invalid_Provider_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Course Invalid Provider Message</shortDescription>
+        <value>Invalid Provider</value>
+    </labels>
+    <labels>
+        <fullName>Course_Not_Published</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Course Not Published</shortDescription>
+        <value>This Course has not yet been published.
+
+Please tick the Active field to publish changes to this record</value>
+    </labels>
+    <labels>
+        <fullName>Course_Provider_Cannot_Be_Modified</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Course Provider Cannot Be Modified</shortDescription>
+        <value>Course has been published to this provider and Provider can’t be changed after this operation</value>
+    </labels>
+    <labels>
+        <fullName>DiscountNotPublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DiscountNotPublished</shortDescription>
+        <value>This Discount has not yet been published.
+
+Please tick the Active field to publish changes to this record</value>
+    </labels>
+    <labels>
+        <fullName>DuplicateFundingRecord</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DuplicateFundingRecord</shortDescription>
+        <value>Duplicate Funding Type is not allowed on Learner Funding.</value>
+    </labels>
+    <labels>
+        <fullName>Inactive_LMS_CourseRun_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inactive_LMS_CourseRun_Message</shortDescription>
+        <value>LMS Course Run deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>Inactive_LMS_Course_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inactive LMS Course Message</shortDescription>
+        <value>LMS course deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>InvalidLearnerFundingAmount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvalidLearnerFundingAmount</shortDescription>
+        <value>Amount has to be &gt; 0</value>
+    </labels>
+    <labels>
+        <fullName>LearnerFundingEmptyMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LearnerFundingEmptyMsg</shortDescription>
+        <value>Funding values should not be empty. please Remove/Add necessary details.</value>
+    </labels>
+    <labels>
+        <fullName>NonAdminMsgOnCategory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonAdminMsgOnCategory</shortDescription>
+        <value>This record is currently undergoing a review in Umbraco</value>
+    </labels>
+    <labels>
+        <fullName>PaymentProcess_Failure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentProcess_Failure</shortDescription>
+        <value>Unfortunately, the payment was unsuccessful.</value>
+    </labels>
+    <labels>
+        <fullName>PaymentProcess_Invalid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentProcess_Invalid</shortDescription>
+        <value>Invalid Payment Transaction. 
+
+Please reach out to us for further assistance if you received this message after making a payment.</value>
+    </labels>
+    <labels>
+        <fullName>PaymentProcess_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentProcess_Success</shortDescription>
+        <value>Your payment has been successfully processed.</value>
+    </labels>
+    <labels>
+        <fullName>Payment_RetryMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment_RetryMessage</shortDescription>
+        <value>Note: If your last E-Payment attempt was unsuccessful, please wait for 15 minutes before retrying.</value>
+    </labels>
+    <labels>
+        <fullName>Public_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Public URL</shortDescription>
+        <value>http://simpd.bluecube.com.sg</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Category_Currently_Unpublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Category - Currently Unpublished</shortDescription>
+        <value>This Category record is currently unpublished.
+
+If you wish to &quot;Republish&quot; this record, please check the &quot;Active&quot; checkbox and click on this button again.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_CourseRun_Pending_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish_CourseRun_Pending_Message</shortDescription>
+        <value>This record is currently undergoing a review in Umbraco</value>
+    </labels>
+    <labels>
+        <fullName>Publish_CourseRun_Success_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish_CourseRun_Success_Message</shortDescription>
+        <value>Please review your changes in Umbraco CMS</value>
+    </labels>
+    <labels>
+        <fullName>Publish_CourseRun_to_SIM_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish CourseRun to SIM - In Progress</shortDescription>
+        <value>Course Run is currently being published to the LMS.
+
+Please contact the System Administrator if the process is taking too long.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_CourseRun_to_SIM_Sent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish CourseRun to SIM - Sent</shortDescription>
+        <value>Changes to the Course Run is now being published to the LMS.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Course_Pending_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Course Pending Message</shortDescription>
+        <value>This record is currently undergoing a review in Umbraco</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Course_Run_Currently_Unpublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish_Course_Run_Currently_Unpublished</shortDescription>
+        <value>This Course Run record is currently unpublished.
+
+If you wish to &quot;Republish&quot; this record, please check the &quot;Active&quot; checkbox and click on this button again.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Course_Success_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Course Success Message</shortDescription>
+        <value>Please review your changes in Umbraco CMS</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Course_to_SIM_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Course to SIM - In Progress</shortDescription>
+        <value>Course is currently being published to the LMS.
+
+Please contact the System Administrator if the process is taking too long.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Course_to_SIM_Sent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Course to SIM - Sent</shortDescription>
+        <value>Changes to the Course is now being published to the LMS.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Discount_Currently_Unpublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Discount Currently Unpublished</shortDescription>
+        <value>This Discount record is currently unpublished.
+
+If you wish to &quot;Republish&quot; this record, please check the &quot;Active&quot; checkbox and click on this button again.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Discount_Pending</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish_Discount_Pending</shortDescription>
+        <value>This record is currently undergoing a review in Umbraco</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Discount_successMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish_Discount_successMessage</shortDescription>
+        <value>Please review your changes in Umbraco CMS</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Invoice_Existing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Invoice - Existing</shortDescription>
+        <value>The PDF has been generated for this invoice. 
+
+Please refresh the record page to get the latest update</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Invoice_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Invoice - In Progress</shortDescription>
+        <value>Invoice Generation is currently in progress.
+
+Please refresh the record and check the files in the record. 
+
+Otherwise, please contact the System Administrator for assistance</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Invoice_Invalid_Bill_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Invoice - Invalid Bill Date</shortDescription>
+        <value>Invoice Bill Date cannot be a past/future date.
+
+Please update the Invoice Bill Date before generating the Invoice PDF.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Invoice_No_Line_Items</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Invoice - No Line Items</shortDescription>
+        <value>There are no line items created for this invoice.
+
+Please ensure that line items are available before generating the PDF.</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Invoice_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Invoice - Success</shortDescription>
+        <value>Invoice is now being generated.
+
+Please go to the Invoice Record files for the generated PDF</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Note_Existing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Note - Existing</shortDescription>
+        <value>The PDF has been generated for this Accounting Note. 
+
+Please refresh the record page to get the latest update</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Note_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Note - In Progress</shortDescription>
+        <value>Accounting Note Generation is currently in progress. 
+
+Please refresh the record and check the files in the record. 
+
+Otherwise, please contact the System Administrator for assistance</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Note_Not_yet_Approved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Note - Not yet Approved</shortDescription>
+        <value>This Accounting Note has not been approved yet for submission.
+
+Please follow up on the approvals to allow make this request to the Finance team</value>
+    </labels>
+    <labels>
+        <fullName>Publish_Note_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Publish Note - Success</shortDescription>
+        <value>Accounting Note is now being generated. 
+
+Please go to the Accounting Note Record files for the generated PDF</value>
+    </labels>
+    <labels>
+        <fullName>Registration_Success_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Registration Success Message</shortDescription>
+        <value>Registration Completed. Please check your email inbox for login credentials.</value>
+    </labels>
+    <labels>
+        <fullName>SF_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SF URL</shortDescription>
+        <value>https://simdigital--simstream1.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>SPOC_Declaration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SPOC Declaration</shortDescription>
+        <value>If you want to perform group registration or on behalf of someone, please contact our Program Executive.
+Are you trying to perform group registration or on behalf of someone?</value>
+    </labels>
+    <labels>
+        <fullName>SceenMessageOnCategory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SceenMessageOnCategory</shortDescription>
+        <value>Please review your changes in Umbraco CMS</value>
+    </labels>
+    <labels>
+        <fullName>Skill_Future_Consent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Skill Future Consent</shortDescription>
+        <value>*On selecting Skills Future Credit, you are confirming to be a Singapore Citizen who has attained 25 Years of age</value>
+    </labels>
+    <labels>
+        <fullName>SpocMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExistingSpocMsg</shortDescription>
+        <value>This Contact is already registered as a SPOC.</value>
+    </labels>
+    <labels>
+        <fullName>SpocMsg_AccountRequiredFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpocMsg_AccountRequiredFields</shortDescription>
+        <value>Please make sure all the Billing Address information are populated on the Account first before updating Contact as SPOC. You are redirected to the Account record now.</value>
+    </labels>
+    <labels>
+        <fullName>Submitted_for_Unpublish_Msg_Category</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submitted for Unpublish Msg Category</shortDescription>
+        <value>This Category has now been unpublished</value>
+    </labels>
+    <labels>
+        <fullName>Submitted_for_Unpublish_Msg_Course</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submitted for Unpublish Msg Course</shortDescription>
+        <value>This Course has now been unpublished</value>
+    </labels>
+    <labels>
+        <fullName>Submitted_for_Unpublish_Msg_CourseRun</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submitted for Unpublish Msg CourseRun</shortDescription>
+        <value>This Course Run has now been unpublished</value>
+    </labels>
+    <labels>
+        <fullName>Submitted_for_Unpublish_Msg_Discount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submitted for Unpublish Msg Discount</shortDescription>
+        <value>This Discount has now been unpublished</value>
+    </labels>
+    <labels>
+        <fullName>Temp_New_Line</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp New Line</shortDescription>
+        <value>-
+-</value>
+    </labels>
+    <labels>
+        <fullName>UpdateAsSPOC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UpdateAsSPOC</shortDescription>
+        <value>This Contact has now been Updated as a SPOC.</value>
+    </labels>
+    <labels>
+        <fullName>publish_Course_as_Unpublished</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>publish Course as Unpublished</shortDescription>
+        <value>This Course record is currently unpublished.
+
+If you wish to &quot;Republish&quot; this record, please check the &quot;Active&quot; checkbox and click on this button again.</value>
+    </labels>
+</CustomLabels>

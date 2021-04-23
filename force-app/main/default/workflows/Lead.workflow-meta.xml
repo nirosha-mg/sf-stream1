@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SIM_PD_Email_Notification_To_Lead_Owner</fullName>
+        <description>SIM PD Email Notification To Lead Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Leads_New_assignment_notification_SAMPLE</template>
+    </alerts>
+</Workflow>

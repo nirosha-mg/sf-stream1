@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://simglb2cdev.b2clogin.com/simglb2cdev.onmicrosoft.com/B2C_1A_signup_signin_SAML</issuer>
+    <loginUrl>https://simglb2cdev.b2clogin.com/simglb2cdev.onmicrosoft.com/B2C_1A_signup_signin_SAML/samlp/sso/login</loginUrl>
+    <logoutUrl>https://simpd.bluecube.com.sg</logoutUrl>
+    <name>SIM Digital Old</name>
+    <oauthTokenEndpoint>https://simdigital--simstream1.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P12w00000A2yOJ</requestSigningCertId>
+    <salesforceLoginUrl>https://simdigital--simstream1.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://simdigital--simstream1.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>RedirectBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://simglb2cdev.b2clogin.com/simglb2cdev.onmicrosoft.com/B2C_1A_signup_signin_SAML/samlp/sso/logout</singleLogoutUrl>
+    <useConfigRequestMethod>false</useConfigRequestMethod>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDPDCCAiSgAwIBAgIQSIhqiGUxpLhD4Sirsj1heDANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDDCZDYW52YXNfZGV2LnNpbWdsYjJjZGV2Lm9ubWljcm9zb2Z0LmNvbTAeFw0yMDEwMTYwODU4MjdaFw0yMTEwMTYwOTA4MjNaMDExLzAtBgNVBAMMJkNhbnZhc19kZXYuc2ltZ2xiMmNkZXYub25taWNyb3NvZnQuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqLt8HuTwAL8Q49GknOerzbIv5+5Le/lzF4ZOcYhg8uV9jXZmmbbqlnhcYo9iZYhczWTEJxQwpFqY83kJI3sA4HXeblo1pmkVeGUR0Q4bYoQQgoMZkmkuN19UEr9UvyP4Sgz0rUl50V7b20UMVz6Zs6Or4Fd0cRf426oYasMNcZ7LvDbKJTx/hf1+I9jKyFLgVeyrlu+Srf6Vlg9r/+ESGY8k5eapSf8TKFuYiVz8Nirl9rjXe/I84lCDu3uSjfIz7ogrqlMnmPBl6qtfeRq1O55++IFxLhBmikRVTLplcXK8nHVpXWT/XYQZ4zu+zinwEU/8tQztqksQzSA0A+/m3QIDAQABo1AwTjAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1UdDgQWBBRigq+644D7QrpQgIdjO9qBNeTPwDANBgkqhkiG9w0BAQsFAAOCAQEAcJ/TRbJ7q1XPv+Eqz8bQ/LY3iKJ1JxLXBgUvn3ffOQBtsNCJRZSM6H08oFuuwUGrTdOiXgjptFJXjcwygxwdPaa45cUkdwRVUxy8P7k4xcBnnQixZunqfRvpO0+612KkjrXWThnl/fGXgyqmvmXn/Bri9uF1yTTF9K+5C4jKfZJgXmrIBbIv0wStj/40i/KE1sLngSlL0oBKh5bo6Kqqg2hj4BjE0ksw7N1dODzzrAyd7C9P2wXsXVKpdwCYFdA/JGP3Rbw+XJFqNQfHfU4lBaZakzhjt0uJnFJX1bbAECEL26FWup5r7c4pyxidlfGwEW8Ft5ty2VZrmmspshxJVA==</validationCert>
+</SamlSsoConfig>

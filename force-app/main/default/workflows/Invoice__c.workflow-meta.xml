@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SIM_PD_Invoice_Learner_Notification</fullName>
+        <description>SIM PD Invoice : Learner Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Learner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>desmondho@sim.edu.sg</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Invoice_Learner_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>SIM_PD_Invoice_PE_Notification</fullName>
+        <description>SIM PD Invoice : PE Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Course_Run_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>desmondho@sim.edu.sg</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Invoice_PE_Notification</template>
+    </alerts>
+</Workflow>

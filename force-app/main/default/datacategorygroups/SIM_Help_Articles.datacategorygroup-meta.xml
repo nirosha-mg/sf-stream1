@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Course Category Management</label>
+                <name>Course_Category_Management</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Payment Type LOV</label>
+                <name>Payment_Type_LOV</name>
+            </dataCategory>
+            <label>System Administrator</label>
+            <name>System_Administrator</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Course and Course Run Creation</label>
+                <name>Course_and_Course_Run_Creation</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Invoice Generation</label>
+                <name>Invoice_Generation</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Survey Management</label>
+                <name>Survey_Management</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Certification Management</label>
+                <name>Certification_Management</name>
+            </dataCategory>
+            <label>Business Manager</label>
+            <name>Business_Manager</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Course Information</label>
+                <name>Course_Information</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Course Registration</label>
+                <name>Course_Registration</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Invoice &amp; Payment</label>
+                <name>Invoice_Payment</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Certification</label>
+                <name>Certification</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Feedback</label>
+                <name>Feedback</name>
+            </dataCategory>
+            <label>Learner</label>
+            <name>Learner</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>SIM Help Articles</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

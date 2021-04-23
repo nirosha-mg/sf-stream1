@@ -1,0 +1,144 @@
+<!---->
+<aura:component controller="PaymentController" implements="force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+   <!-- 1Feb2021 - Poon Koon - Remove default from payment options-->
+   <!--<aura:attribute name="options" type="List" default="[
+         {'label': 'E-Payment (Mastercard/Visa)', 'value': 'MastercardVisa'},
+         {'label': 'Over-the-Counter (Cash/Cheque/Others)', 'value': 'Other'}
+      ]"/>-->
+   <aura:attribute name="options" type="List"/>
+   <aura:attribute name="value" type="String" default="option1"/>
+   <aura:attribute name="invoiceRecordInfo" type="Object" />
+   <aura:attribute name="paymentRecordInfo" type="Object" />
+   <aura:attribute name="recordId" type="String"/>
+   <aura:attribute name="redirectRecordId" type="String"/>
+   <aura:attribute name="createURL" type="String" />
+   <aura:attribute name="isExecutiveModalOpen" type="boolean" default="false"/>
+   <aura:attribute name="paymentGetwayRecord" type="Object" />
+   <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+   <!-- 29JAN2021 - Rob - Payment Option -->   
+   <aura:attribute name="courseRecordInfo" type="Object" />
+   <!-- 2021-03-25 Poon Koon: ePayment V2 attributes-->
+   <aura:attribute name="requestMessage" type="String"/>
+   <aura:attribute name="requestSignature" type="String"/>  
+
+   <aura:if isTrue="{!v.isExecutiveModalOpen}">
+         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+               <div class="slds-modal__container">  
+                  <header class="slds-modal__header">
+                     <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Thank you for Registering</h2>
+                  </header> 
+                  <!-- MODAL BOX BODY Part Start -->
+                  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                     <p> {!$Label.c.CourseRegistration_ExecutiveMsg} </p>
+                  </div>    
+                  <footer class="slds-modal__footer">                       
+                     <lightning:button variant="brand" 
+                                       label="Ok"
+                                       title="Ok"
+                                       onclick="{!c.redirectToInvoice}"/>
+                  </footer>
+               </div>
+         </section>
+         <div class="slds-backdrop slds-backdrop_open"></div> 
+      </aura:if>
+
+   <div class="slds-box">
+      <lightning:radioGroup aura:id="paymentOption"
+         name="paymentOption"
+         label="Please select a payment option"
+         options="{!v.options}"
+         value="{! v.value }"
+         type="radio"
+         required="true"
+      />
+
+      <!--change it to custom setting Name : -PaymentGetway , Payment URL  -->    
+      <!-- 2021-03-30 Poon Koon: Commented out parameters for old payment gateway -->         
+      <form aura:id="postEPayment" method="POST" action="{!v.paymentGetwayRecord.Payment_Gateway_URL__c}">
+         <table
+            width="90%"
+            border="0"
+            align="center"
+            cellpadding="5"
+            cellspacing="2"
+            >
+            <tr>
+               <td colspan="2">
+                  <!-- <input name="type" value="2" type="hidden"  id="type" /> -->
+               </td>
+            </tr>
+            <!--Mark as Hidden can be use recordid-->
+            <tr>
+               <td colspan="2">
+                  <!-- <input
+                     name="invoicenumber"
+                     type="hidden"
+                     id="invoicenumber"
+                     value="{!v.recordId}"
+                     /> -->
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <!-- <input name="amount"  type="hidden" id="amount"
+                     value="{!v.invoiceRecordInfo.Final_Amount__c}" /> Change to Nett Amount -->
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <!-- <input
+                     name="description"
+                     type="hidden"
+                     id="description"
+                     value="E-Payment for SIM Programme Registration"
+                     /> -->
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <!-- <input
+                     name="returnurl"
+                     type="hidden"
+                     id="returnurl"
+                     value="{!v.createURL}"
+                     /> -->
+               </td>
+            </tr>
+         </table>
+         <div>
+            <!-- <input name="TM_Status" type="hidden" id="TM_status" />
+            <input name="TM_Mcode" type="hidden" id="TM_Mcode" />
+            <input name="TM_RefNo" type="hidden" id="TM_RefNo" />
+            <input name="TM_Currency" type="hidden" id="TM_Currency" />
+            <input name="TM_DebitAmt" type="hidden" id="TM_DebitAmt" value="0" />
+            <input name="TM_ErrorMsg" type="hidden" id="TM_ErrorMsg" />
+            <input name="TM_ApprovalCode" type="hidden" id="TM_ApprovalCode" />
+            <input name="TM_BankRespCode" type="hidden" id="TM_BankRespCode" />
+            <input name="TM_Error" type="hidden" id="TM_Error" />
+            <input name="TM_CCLast4Digit" type="hidden" id="TM_CCLast4Digit" /> -->
+
+            <!--2021-03-25 Poon Koon: ePayment V2 attributes-->
+            <input name="req_msg" type="hidden" id="req_msg" value="{!v.requestMessage}" />
+            <input name="req_sig" type="hidden" id="req_sig" value="{!v.requestSignature}" />
+         </div>
+         <br />
+         <lightning:button variant="destructive" 
+            label="Cancel" 
+            title="Cancel Payment Attempt" 
+            onclick="{! c.redirectBack }" />
+         <lightning:button variant="brand" 
+            label="Proceed" 
+            title="Proceed to make payment" 
+            onclick="{! c.submitForm }" />
+      </form>
+
+      <!-- 2021-04-09 Poon Koon: Retry Message for failed attempt-->
+      <div class="slds-col">
+         <span class="slds-form-element__label slds-no-flex">
+            {!$Label.c.Payment_RetryMessage}
+         </span>
+       </div>
+   </div>
+   
+   
+</aura:component>

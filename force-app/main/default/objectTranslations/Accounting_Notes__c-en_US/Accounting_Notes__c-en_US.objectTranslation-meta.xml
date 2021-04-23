@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Accounting Notes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Accounting Notes</value>
+    </caseValues>
+    <layouts>
+        <layout>Accounting Notes Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Credit Note Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Financial Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Remarks</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Debit Note Layout</layout>
+        <sections>
+            <label></label>
+            <section>Approval Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Financial Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Remarks</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Refund Layout</layout>
+        <sections>
+            <label></label>
+            <section>Approval Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Financial Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Remarks</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Generate_PDF</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Request_Refund_for_Debit_Note_Flow</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Credit_Note</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Debit_Note</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Refund</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ePayment Account No</label>
+    <pluralLabel>ePayment Account Nos</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

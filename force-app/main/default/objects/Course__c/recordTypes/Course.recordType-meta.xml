@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course</fullName>
+    <active>true</active>
+    <description>Public Courses /Courses without SSG Modules/Courses with Skill future credit</description>
+    <label>Course</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Agile At Scale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artificial Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business %26 Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Insight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CX %26 UX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Spoken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication - Written</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex Adaptive Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creativity %26 Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design Thinking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Practices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Transformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disruptive Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employability Skills System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events %26 Conferences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evergreen Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance %26 Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Management %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual %3A Social %26 Self Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovation Ecosystem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Function</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandarin courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing %26 Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational %3A Human Capital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational Learning %26 Change Transformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Effectiveness %26 Productivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMIT Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Formulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Thinking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talent Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talent Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team  Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team %3A High Performance Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Leadership %26 Interpersonal Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology %26 Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The JO Series</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Certificate_Category__c</picklist>
+        <values>
+            <fullName>Business Management%28BM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employability skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funded conferences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership %26 People Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost_Center__c</picklist>
+        <values>
+            <fullName>AE1000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM1033</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM1034</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM1040</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SM1043</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Course_Audience__c</picklist>
+        <values>
+            <fullName>In-House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Course_Type__c</picklist>
+        <values>
+            <fullName>Instructor-Led</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Paced</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>ACD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fee_Code__c</picklist>
+        <values>
+            <fullName>ACCOMM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIRFAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMLEPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COURIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECADV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECCOURSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVENTFEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXCESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FDNBEV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPPPROGRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPSUNDRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBFFUNCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEMACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARTIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROGRM</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>RMRENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFCREDIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHTAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPONSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUNDRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPTFEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRGMAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDAFRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDAGRANT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WITHDR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Funding__c</picklist>
+        <values>
+            <fullName>IBF Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkillsFuture Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTAP Funding</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GST_Code__c</picklist>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GST_Mode__c</picklist>
+        <values>
+            <fullName>Full</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Nett</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interest_Group__c</picklist>
+        <values>
+            <fullName>Unrestricted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode_Of_Study__c</picklist>
+        <values>
+            <fullName>On-Campus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Option__c</picklist>
+        <values>
+            <fullName>MastercardVisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Status__c</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Callout Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider__c</picklist>
+        <values>
+            <fullName>RMIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publish_Status__c</picklist>
+        <values>
+            <fullName>Creation Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Published</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Creation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Unpublish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Update Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublish Call out Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpublished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Call out Failure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Who_Should_Enroll_MPL__c</picklist>
+        <values>
+            <fullName>Level 1 - Admin %26 Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 2 - Supervisor%2C Executive%2C %26 Emerging Managers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 3 - New Managers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 4 - Managers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 5 - Senior Managers %26 Directors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 6 - C-Suite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

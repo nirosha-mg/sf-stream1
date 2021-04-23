@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Draft</fullName>
+        <default>true</default>
+        <label>Draft</label>
+    </customValue>
+    <customValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </customValue>
+    <customValue>
+        <fullName>Activated</fullName>
+        <default>false</default>
+        <label>Activated</label>
+    </customValue>
+    <customValue>
+        <fullName>Deactivated</fullName>
+        <default>false</default>
+        <label>Deactivated</label>
+    </customValue>
+    <customValue>
+        <fullName>Callout Failure</fullName>
+        <default>false</default>
+        <label>Callout Failure</label>
+    </customValue>
+    <masterLabel>Provider Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

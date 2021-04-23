@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residency_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Refers to type of residency in Singapore</inlineHelpText>
+    <label>Residency Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Citizen</fullName>
+                <default>false</default>
+                <label>Citizen</label>
+            </value>
+            <value>
+                <fullName>Dependent Pass</fullName>
+                <default>false</default>
+                <label>Dependent Pass</label>
+            </value>
+            <value>
+                <fullName>Employment Pass/Work Permit</fullName>
+                <default>false</default>
+                <label>Employment Pass/Work Permit</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Permanent Resident</fullName>
+                <default>false</default>
+                <label>Permanent Resident</label>
+            </value>
+            <value>
+                <fullName>Professional Pass</fullName>
+                <default>false</default>
+                <label>Professional Pass</label>
+            </value>
+            <value>
+                <fullName>Student Pass</fullName>
+                <default>false</default>
+                <label>Student Pass</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

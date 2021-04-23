@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Learner_Notification_Email_Subject__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&lt;CONFIDENTIAL&gt; SIM SEMINAR REGISTRATION: &quot; &amp; LEFT(Course_Title__c, 120) &amp; &quot; (&quot; &amp; Course_Run_Start_End_Date__c &amp; &quot;) - &quot; &amp; LEFT(First_Name__c &amp; &quot; &quot; &amp; Last_Name__c, 40)</formula>
+    <label>Learner Notification Email Subject</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

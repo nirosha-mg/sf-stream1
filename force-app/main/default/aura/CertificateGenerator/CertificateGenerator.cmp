@@ -1,0 +1,49 @@
+<aura:component implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId" access="global" controller="CertificateGeneratorController">
+    <aura:html tag="style">
+        .slds-modal__container {
+             width : 80% !important;
+             max-width : 80% !important;
+         }
+    </aura:html>    
+    
+    <aura:attribute name="modalBody" type="Object" />
+    <aura:attribute name="columns" type="List" default="[]"/>
+    <aura:attribute name="data" type="List" default="[]"/>
+    <aura:attribute name="selectedRows" type="List" default="[]"/>
+    <aura:attribute name="emailTemplates" type="List" default="[]"/>
+    <aura:attribute name="template" type="String" />
+    <aura:attribute name="generateCertificate" type="Boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="aura:waiting" action="{!c.waiting}"></aura:handler>
+    <aura:handler event="aura:doneWaiting" action="{!c.doneWaiting}"></aura:handler>
+    {!v.modalBody}
+    
+    <div class="slds-grid slds-gutters slds-wrap">                            
+        <div class="slds-col slds-size_11-of-12">
+            <lightning:combobox name="cbTemplate" 
+                        label="Template" 
+                        placeholder="Select Template"
+                        options="{!v.emailTemplates}"
+                        onchange="{!c.templateChanged}"
+                        variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-12">
+            <lightning:button type="submit" 
+                            label="Generate" 
+                            title="Generate" 
+                            variant="destructive"
+                            onclick="{!c.generateCertificates}"/>
+        </div>
+    </div>
+    <br />
+    <div class="slds-grid slds-gutters slds-wrap">  
+        <div class="slds-col slds-size_1-of-1">
+            <lightning:datatable
+                columns="{!v.columns}"
+                data="{!v.data}"
+                keyField="id"
+                onrowaction="{!c.handleRowAction}"
+                onrowselection="{!c.handleRowSelection}"/>
+        </div>
+        </div>
+</aura:component>

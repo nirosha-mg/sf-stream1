@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Reg_End_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>LPad(Text(Day(Course_Registration__r.Course_Run_Id__r.End_Date__c )),2,&apos;0&apos;) &amp; &quot;/&quot; &amp;
+LPad(Text(Month(Course_Registration__r.Course_Run_Id__r.End_Date__c )),2,&apos;0&apos;) &amp; &quot;/&quot; &amp;
+Text(Year(Course_Registration__r.Course_Run_Id__r.End_Date__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Course Reg End Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

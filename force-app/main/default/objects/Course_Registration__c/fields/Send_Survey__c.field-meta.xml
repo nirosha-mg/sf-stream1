@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Survey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>MVP1.0 Please check this Box to initiate a Survey Invitation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this Box to initiate a Survey Invitation</inlineHelpText>
+    <label>Send Survey</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

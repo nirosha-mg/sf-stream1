@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remark_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Remark Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCN001</fullName>
+                <default>false</default>
+                <label>WRONG BILLING</label>
+            </value>
+            <value>
+                <fullName>NCC002</fullName>
+                <default>false</default>
+                <label>DEFERMENT</label>
+            </value>
+            <value>
+                <fullName>CCN002</fullName>
+                <default>false</default>
+                <label>WRONG INVOICE DESCRIPTION</label>
+            </value>
+            <value>
+                <fullName>NCC003</fullName>
+                <default>false</default>
+                <label>ADVANCE NOT OFFSET</label>
+            </value>
+            <value>
+                <fullName>NCC001</fullName>
+                <default>false</default>
+                <label>WITHDRAWAL</label>
+            </value>
+            <value>
+                <fullName>NCC004</fullName>
+                <default>false</default>
+                <label>OTHERS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,45 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RegistrationFormController">
+    
+    <aura:attribute name="corporateAccount" type="Boolean" default="false" />
+    <aura:attribute name="result" type="String" />
+    <aura:attribute name="modalBody" type="Object" />
+
+    {!v.modalBody}
+
+    <div class="slds-box slds-theme_default">
+    <div class="slds-form">
+        <div class="slds-form-element slds-form-element_stacked">
+            <label class="slds-form-element__label" for="firstName">First Name</label>
+            <div class="slds-form-element__control">
+                <lightning:input aura:id="firstName" name="firstName" variant="label-hidden" class="slds-input" type="text" value="" required="true" placeholder="John"/>
+            </div>  
+            <label class="slds-form-element__label" for="lastName">Last Name</label>
+            <div class="slds-form-element__control">
+                <lightning:input aura:id="lastName" name="lastName" variant="label-hidden" class="slds-input" type="text" value="" required="true" placeholder="Sim"/>
+            </div>
+            <label class="slds-form-element__label" for="email">Email Address</label>
+            <div class="slds-form-element__control">
+                <lightning:input aura:id="email" name="email" variant="label-hidden" class="slds-input" type="text" value="" required="true" placeholder="john.sim@gmail.com"/>
+            </div>
+            <br />
+            <div class="slds-form-element__control">
+                <lightning:input type="checkbox" label="Registering for a Corporate Account?" class="checkboxCSS fieldCSS" value="{!v.corporateAccount}" name="chkCorpAcct" onchange="{!c.handleOnChange}" />
+            </div>
+            <aura:if isTrue="{!v.corporateAccount}">
+                <label class="slds-form-element__label" for="uenNo">UEN No.</label>
+                <div class="slds-form-element__control">
+                    <lightning:input type="text" name="uenNo" aura:id="uenNo" placeholder="Your company's UEN No" variant="label-hidden" class="slds-input" required="{!v.corporateAccount}" />
+                </div>
+                <label class="slds-form-element__label" for="companyName">Company Name</label>
+                <div class="slds-form-element__control">
+                    <lightning:input type="text" aura:id="companyName" name="companyName" placeholder="Company Name" variant="label-hidden" class="slds-input" required="{!v.corporateAccount}"/>
+                </div>
+            </aura:if>
+            <br />
+            <div class="slds-form-element__control">
+                <lightning:button label="Sign Up" variant="brand" class="fullwidth" onclick="{!c.signup}" />
+            </div>
+        </div>
+    </div>
+    </div>
+</aura:component>

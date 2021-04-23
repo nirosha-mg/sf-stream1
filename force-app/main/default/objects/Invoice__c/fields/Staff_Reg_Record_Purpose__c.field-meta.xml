@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Reg_Record_Purpose__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicate that billing is meant for SIM Staff for the course registered</description>
+    <externalId>false</externalId>
+    <label>Staff Reg - Record Purpose</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

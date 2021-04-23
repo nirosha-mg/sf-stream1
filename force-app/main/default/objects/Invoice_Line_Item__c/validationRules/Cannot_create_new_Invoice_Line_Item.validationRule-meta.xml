@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_create_new_Invoice_Line_Item</fullName>
+    <active>true</active>
+    <description>Cannot create new Invoice Line Item if the Invoice Status is not Draft</description>
+    <errorConditionFormula>AND(NOT(ISPICKVAL(Invoice__r.Status__c, &quot;Draft&quot;)),$Profile.Name &lt;&gt; &quot;Integration Profile&quot;)</errorConditionFormula>
+    <errorMessage>Invoice has been generated</errorMessage>
+</ValidationRule>

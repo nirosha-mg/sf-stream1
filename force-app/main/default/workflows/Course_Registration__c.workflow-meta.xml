@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SIM_PD_Course_Evaluation_Survey</fullName>
+        <description>SIM PD Course Evaluation Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>desmondho@sim.edu.sg</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Course_Evaluation_Survey</template>
+    </alerts>
+    <alerts>
+        <fullName>SIM_PD_Course_Registration_Learner_Notification</fullName>
+        <description>SIM PD Course Registration : Learner Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Course_Run_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Course_Registration_Learner_Notification2</template>
+    </alerts>
+    <alerts>
+        <fullName>SIM_PD_Course_Registration_PE_Notification</fullName>
+        <description>SIM PD Course Registration : PE Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Course_Run_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>simdigital_noreply@sim.edu.sg</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>SIM_Email_Templates/SIM_PD_Course_Registration_PE_Notification</template>
+    </alerts>
+</Workflow>

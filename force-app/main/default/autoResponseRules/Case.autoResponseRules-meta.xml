@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>SIM PD Case Auto Response Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>simdigital_noreply@sim.edu.sg</senderEmail>
+            <senderName>simdigital_noreply</senderName>
+            <template>SIM_Email_Templates/SIM_PD_Case_Web_to_Case_email_response</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

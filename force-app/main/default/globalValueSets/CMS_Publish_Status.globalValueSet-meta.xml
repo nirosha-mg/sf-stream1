@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Submitted for Creation Review</fullName>
+        <default>false</default>
+        <label>Submitted for Creation Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Creation Review</fullName>
+        <default>false</default>
+        <label>Pending Creation Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected Creation Review</fullName>
+        <default>false</default>
+        <label>Rejected Creation Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Submitted for Update Review</fullName>
+        <default>false</default>
+        <label>Submitted for Update Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Update Review</fullName>
+        <default>false</default>
+        <label>Pending Update Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Published</fullName>
+        <default>false</default>
+        <label>Published</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected Update Review</fullName>
+        <default>false</default>
+        <label>Rejected Update Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Submitted for Unpublish</fullName>
+        <default>false</default>
+        <label>Submitted for Unpublish</label>
+    </customValue>
+    <customValue>
+        <fullName>Unpublished</fullName>
+        <default>false</default>
+        <label>Unpublished</label>
+    </customValue>
+    <customValue>
+        <fullName>Creation Call out Failure</fullName>
+        <default>false</default>
+        <label>Creation Call out Failure</label>
+    </customValue>
+    <customValue>
+        <fullName>Update Call out Failure</fullName>
+        <default>false</default>
+        <label>Update Call out Failure</label>
+    </customValue>
+    <customValue>
+        <fullName>Unpublish Call out Failure</fullName>
+        <default>false</default>
+        <label>Unpublish Call out Failure</label>
+    </customValue>
+    <masterLabel>CMS Publish Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

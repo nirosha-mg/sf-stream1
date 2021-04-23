@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AmountValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( Course_Registration__r.Course_Run_Id__r.CourseRecordType__c == &apos;Funded_Course&apos;,  Amount__c  &gt;  Course_Registration__r.Course_Run_Id__r.CourseFee__c, 
+Amount__c  &gt;  Course_Registration__r.Course_Run_Id__r.CourseFee__c)</errorConditionFormula>
+    <errorMessage>Amount should not be greater than Full fee for the Funded Course, Amount should not be greater than Non Member Fee for the Non Funded course</errorMessage>
+</ValidationRule>

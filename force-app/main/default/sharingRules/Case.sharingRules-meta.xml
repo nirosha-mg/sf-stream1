@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Case_Sharing_Rule_SIM_Business_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>MVP1.0</description>
+        <label>Case Sharing Rule :  SIM Business Admin</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Business_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PD Case</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

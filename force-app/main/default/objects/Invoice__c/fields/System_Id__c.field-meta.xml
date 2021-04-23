@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Id__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Course_Registration__c),&quot;SDP&quot;,
+   IF(AND(ISPICKVAL(Course_Registration__r.Course_Run_Id__r.Course__r.Provider__c, &apos;SIM&apos;), 
+          Course_Registration__r.Course_Run_Id__r.Course__r.RecordType.DeveloperName == &apos;Course&apos;), &quot;SDP&quot;,
+   IF(AND(ISPICKVAL(Course_Registration__r.Course_Run_Id__r.Course__r.Provider__c, &apos;SIM&apos;), 
+          Course_Registration__r.Course_Run_Id__r.Course__r.RecordType.DeveloperName == &apos;Event&apos;), &quot;SDP&quot;,
+   IF(AND(ISPICKVAL(Course_Registration__r.Course_Run_Id__r.Course__r.Provider__c, &apos;SIM&apos;), 
+          Course_Registration__r.Course_Run_Id__r.Course__r.RecordType.DeveloperName == &apos;Funded_Course&apos;), &quot;SD&quot;,
+   IF(AND(ISPICKVAL(Course_Registration__r.Course_Run_Id__r.Course__r.Provider__c, &apos;RMIT&apos;), 
+          Course_Registration__r.Course_Run_Id__r.Course__r.RecordType.DeveloperName == &apos;Course&apos;), &quot;SDR&quot;, &quot;SDP&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>System Id</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

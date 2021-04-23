@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_has_to_be_Positive</fullName>
+    <active>true</active>
+    <errorConditionFormula>Full_Fee__c &lt; 0 ||  SME_Grant__c &lt; 0 ||  Non_SME_Grant__c &lt; 0 ||  Workfare__c &lt; 0 ||  Baseline_Grant__c &lt; 0  || Mid_Career__c &lt; 0 ||  Full_Fee_GST_Amount__c &lt; 0 ||  SME_Grant_GST_Amount__c &lt; 0 ||  Non_SME_Grant_GST_Amount__c &lt; 0 ||  Workfare_GST_Amount__c &lt; 0 ||  Baseline_Grant_GST_Amount__c &lt; 0  || Mid_Career_GST_Amount__c &lt; 0</errorConditionFormula>
+    <errorMessage>Amount has to be positive</errorMessage>
+</ValidationRule>

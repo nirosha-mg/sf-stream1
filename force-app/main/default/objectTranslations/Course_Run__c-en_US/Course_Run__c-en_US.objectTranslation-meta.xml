@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Course Run</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Course Run</value>
+    </caseValues>
+    <layouts>
+        <layout>Community Course Run Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Course Run Layout</layout>
+        <sections>
+            <label></label>
+            <section>CMS Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Certificate Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Provider Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Survey Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>B2B_Bulk_Registration</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Generate_Anonymous_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Generate_Attendance</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Prepare_Certificates</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Publish_to_LMS</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Send_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Stop_Survey</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Submit_to_CMS</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Course_Run_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Lock_Course_Run</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Clone_Course_Run_with_Instructor</name>
+    </webLinks>
+</CustomObjectTranslation>

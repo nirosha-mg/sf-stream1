@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Course_Reg_With_Attachment</name>
+        <label>Send Course Reg With Attachment</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <actionName>invocableEmailAttachment</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <name>ccMail</name>
+            <value>
+                <elementReference>GetCourseRegDetailsByCourseRegID.Course_Run_Owner_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>currentRecordId</name>
+            <value>
+                <elementReference>strCourseRegID</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ebody</name>
+            <value>
+                <elementReference>EmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>eMail</name>
+            <value>
+                <elementReference>GetCourseRegDetailsByCourseRegID.Email_Address__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>eSubject</name>
+            <value>
+                <elementReference>formStrEmailSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendAttachment</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>51.0</apiVersion>
+    <formulas>
+        <name>formStrEmailSubject</name>
+        <dataType>String</dataType>
+        <expression>&quot;Certificate of participation for &quot; &amp; {!GetCourseRegDetailsByCourseRegID.First_Name__c} &amp;{!GetCourseRegDetailsByCourseRegID.Last_Name__c}  &amp; &quot; @ SIM PD&quot;</expression>
+    </formulas>
+    <interviewLabel>Send Cert with Attachment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Cert with Attachment6</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetCourseRegDetailsByCourseRegID</name>
+        <label>GetCourseRegDetailsByCourseRegID</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Course_Reg_With_Attachment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>strCourseRegID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Course_Registration__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetCourseRegDetailsByCourseRegID</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;html&gt;
+&lt;body&gt;
+&lt;div align=&quot;center&quot; style=&apos;margin:0cm;margin-bottom:.0001pt;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;&apos;&gt;
+    &lt;table cellspacing=&quot;3&quot; style=&quot;border: none;width:90.0%;&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;text-align:right;&apos;&gt;&lt;img width=&quot;106&quot; height=&quot;74&quot; src=&quot;https://simstream1-simdigital.cs113.force.com/resource/1613614218000/SIMPDELogo&quot; alt=&quot;https://simstream1-simdigital.cs113.force.com/resource/1613614218000/SIMPDELogo&quot;&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+         &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;&lt;strong&gt;RESTRICTED&lt;/strong&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+&lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&amp;nbsp;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;   
+&lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Dear {!GetCourseRegDetailsByCourseRegID.First_Name__c} {!GetCourseRegDetailsByCourseRegID.Last_Name__c} ,&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+&lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&amp;nbsp;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Thank you for your participation in the  &lt;strong&gt;{!GetCourseRegDetailsByCourseRegID.Course_Run_Id__r.Course__r.Course_Title__c}&lt;/strong&gt;&amp;nbsp;programme held on {!GetCourseRegDetailsByCourseRegID.Course_Run_Id__r.Certificate_Start_End_Date__c}&lt;br&gt;
+We are pleased to attach the certificate of participation for your retention. &lt;/span&gt;
+&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+&lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&amp;nbsp;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Should you need any clarification, please contact:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;{!GetCourseRegDetailsByCourseRegID.Course_Run_Id__r.Owner:User.FirstName}&amp;nbsp;{!GetCourseRegDetailsByCourseRegID.Course_Run_Id__r.Owner:User.LastName}&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;strong&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Email:&lt;/span&gt;&lt;/strong&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;&amp;nbsp;&lt;a href=&quot;mailto:{!GetCourseRegDetailsByCourseRegID.Course_Run_Owner_Email__c}&quot;&gt;{!GetCourseRegDetailsByCourseRegID.Course_Run_Owner_Email__c}&lt;/a&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+&lt;tr&gt;
+           
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&amp;nbsp;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;Best regards&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Programme Management&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;SIM Professional Development Enterprise Learning&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style=&quot;padding:.75pt .75pt .75pt .75pt;&quot;&gt;
+                    &lt;p style=&apos;margin-right:0cm;margin-left:0cm;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;margin:0cm;margin-bottom:.0001pt;&apos;&gt;&lt;em&gt;&lt;span style=&apos;font-size:13px;font-family:&quot;Arial&quot;,sans-serif;color:black;&apos;&gt;Privileged / Confidential information may be contained in this message. If you are not the intended recipient, you must not copy, distribute or use it for any purpose, nor disclose its contents to any other person. Please notify the sender immediately if you have received this in error.&amp;nbsp;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>strCourseRegID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

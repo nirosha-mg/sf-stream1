@@ -1,0 +1,10 @@
+<apex:page sidebar="false" showHeader="false" standardController="Course_Run__c">
+<body>
+<apex:form id="QrForm" >
+<apex:inputtext id="getQr" style="width:80%;display:none;"
+value="{!Course_Run__c.Course_Survey_Anonymous__c}"/> <br/>
+<div id="qrcode" style="width:100px; height:100px; margin-top:0px;"></div>
+<enqr:QrCode myValue="{!Course_Run__c.Course_Survey_Anonymous__c}" />
+</apex:form>
+</body>
+</apex:page>

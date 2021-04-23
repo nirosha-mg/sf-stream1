@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_Mode__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Full - Exclusive of GST
+Nett - Inclusive of GST</inlineHelpText>
+    <label>GST Mode</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>GST_Mode</valueSetName>
+    </valueSet>
+</CustomField>

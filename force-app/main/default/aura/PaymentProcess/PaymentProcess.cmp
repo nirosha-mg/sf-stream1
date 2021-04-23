@@ -1,0 +1,62 @@
+<aura:component controller="PaymentController"  implements="lightning:isUrlAddressable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,forceCommunity:themeLayout,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="paymentRecordId" type="Id" />
+    <aura:attribute name="isResponse" type="boolean" />
+    <aura:attribute name="responseMsg" type="String" />
+    <aura:attribute name="responseId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <!--
+    <aura:if isTrue="{!v.isResponse}">
+    The Payment Status is Successful
+    <aura:set attribute="else">
+        The Payment Status is Failed
+    </aura:set>
+    -->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">  
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                    Payment Acknowledgment
+                </h2>
+            </header> 
+            
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>
+                    <aura:if isTrue="{!v.responseMsg == 'Invalid Record'}">
+                        {!$Label.c.PaymentProcess_Invalid}
+                    </aura:if>
+                    <aura:if isTrue="{!v.responseMsg == 'Success'}">
+                        {!$Label.c.PaymentProcess_Success}
+                        <!-- Show link to redirect to Course Registration -->
+                    </aura:if>
+                    <aura:if isTrue="{!v.responseMsg == 'Failure'}">
+                        {!$Label.c.PaymentProcess_Failure}
+                        <!-- Show link to redirect to Invoice -->
+                    </aura:if>
+                </p>
+            </div>
+                <aura:if isTrue="{!v.responseMsg == 'Success'}">
+                    <footer class="slds-modal__footer">
+                        <lightning:button 
+                        label="View Receipt" 
+                        title="View Receipt" 
+                        variant="brand"
+                        onclick="{!c.redirectToRecord}" />
+                    </footer>
+
+                    <!-- Show link to redirect to Course Registration -->
+                </aura:if>
+                <aura:if isTrue="{!v.responseMsg == 'Failure'}">
+                    <footer class="slds-modal__footer">
+                        <lightning:button 
+                        label="View Payment Information" 
+                        title="View Payment Information" 
+                        variant="brand"
+                        onclick="{!c.redirectToRecord}" />
+                    </footer>
+                    <!-- Show link to redirect to Invoice -->
+                </aura:if>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div> 
+    
+</aura:component>

@@ -1,0 +1,972 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" controller="B2BCourseRegistrationController" access="global" >
+    
+    
+    <!-- Object & List attributes Start -->
+    <aura:attribute name="contactRecord" 					type="Contact"/>
+    <aura:attribute name="mapIdentificationType"  		    type="map"/>
+    <aura:attribute name="mapnationality"  		        	type="map"/>
+    <aura:attribute name="mapemploymentStatus"  		    type="map"/>
+    <aura:attribute name="mapdesignationLevel"  		    type="map"/>
+    <aura:attribute name="lookupContactId"				  	type="List"/>
+    <aura:attribute name="DeleteCourseRegistrationList"  	type="List"/>
+    <aura:attribute name="UpdateCourseRegistrationList"  	type="List"/>
+    <aura:attribute name="listcourseRegId"  				type="List"/>
+    <aura:attribute name="CourseRegistrationList"  			type="List"/>
+    <aura:attribute name="EditCourseRegistrationList"  		type="List"/>
+    <aura:attribute name="DublicateCourseRegistrationList"  type="List"/>
+     <aura:attribute name="ExistingEmail"  		            type="map"/>
+    <aura:attribute name="courseRegistrationRecord" 		type="Course_Registration__c"/>
+    <aura:attribute name="courseRunRecord" 					type="Course_Run__c"/>
+    <aura:attribute name="contactInfowrapper" 				type="Object"/>
+    <aura:attribute name="modalBody" 						type="Object" />
+    <aura:attribute name="invoiceId" type="Id"/>
+    <!-- Object & List attributes Start -->
+    
+    <!-- File upload attributes Start -->
+    <aura:attribute name="filetype" 	 					type="List"   default="['.csv']" />
+    <aura:attribute name="fileStorage"	 					type="String" />
+    <aura:attribute name="fileLenght"	 					type="integer" />
+    <aura:attribute name="fileName" 	 					type="String" default="No File Selected.." />
+    <!-- File upload attributes End -->
+    
+    <!-- Modal Popup attribute Start-->
+    <aura:attribute name="EmailError" 				        type="boolean" default="false"/>
+    <aura:attribute name="declaration" 				        type="boolean" default="true"/>
+    <aura:attribute name="particulars" 				        type="boolean" default="true"/>
+    <aura:attribute name="Payment" 				        	type="boolean" default="true"/>
+    <aura:attribute name="piiSection" 				        type="boolean" default="false"/>
+    <aura:attribute name="declineModalOpen" 				type="boolean" default="false"/>
+    <aura:attribute name="fundedtemplate"      				type="boolean" default="false"/>
+    <aura:attribute name="nonfundedtemplate"      			type="boolean" default="false"/>
+    <!-- Modal Popup attribute End -->
+    
+    <!-- Variable attributes Start -->
+    
+    <aura:attribute name="AccountIdPE" 			        	type="String"/>
+    <aura:attribute name="AccountName" 			        	type="String"/>
+    <aura:attribute name="ContactName" 			        	type="String"/>
+    <aura:attribute name="source" 							type="boolean" default="false"/>
+    <aura:attribute name="recordId" 						type="String"/>
+    <aura:attribute name="SelectedUserId" 					type="String"/>
+    <aura:attribute name="isContactNull" 				    type="boolean" default="false"/>
+    <aura:attribute name="accid"   					    	type="String" />
+    <aura:attribute name="sMessage"   					    type="String"  default="Error list.  "/>
+    <aura:attribute name="NricModalOpen" 					type="boolean" default="false"/>
+    <aura:attribute name="NricLengthValidation" 			type="boolean" default="false"/> 
+    <aura:attribute name="NricFirstCharValidation" 			type="boolean" default="false"/> 
+    <aura:attribute name="NricMiddleValValidation" 			type="boolean" default="false"/> 
+    <aura:attribute name="NricEndCharValidation" 			type="boolean" default="false"/> 
+    <aura:attribute name="NricNotNull" 						type="boolean" default="false"/> 
+    <aura:attribute name="EditcourseRegistrationId" 		type="Id"/>
+    <aura:attribute name="EditContactId" 					type="Id"/>
+    <aura:attribute name="ContactId" 					    type="Id"/>
+    <aura:attribute name="searchContactId"   			    type="String"/>
+    <aura:attribute name="searchContactPE"   			    type="String"/>
+    <aura:attribute name="courserunIdPE"   			        type="String"/>
+    <aura:attribute name="CourseRegistrationMasterId" 		type="Id"/>
+    <aura:attribute name="rmitCheckbox" 					type="boolean" 		default="false"/>
+    <aura:attribute name="memberCheckbox" 					type="boolean" 		default="false"/>
+    <aura:attribute name="courseRegistrationId" 			type="Id"/>
+    <aura:attribute name="isExecutiveModalOpen" 			type="boolean" 		default="false"/>
+    <aura:attribute name="acceptModalOpen" 					type="boolean" 		default="false"/>
+    <aura:attribute name="PDPAModalOpen" 					type="boolean" 		default="false"/>
+    <aura:attribute name="isOpen"			    			type="boolean" 		default="false"/>
+    <aura:attribute name="PaymentModalOpen" 				type="boolean" 		default="false"/>
+    <aura:attribute name="isDraftOpen" 						type="boolean" 		default="false"/>
+    <aura:attribute name="Spinner"              			type="boolean" 		default="false"/>
+    <aura:attribute name="courseRunCode"   					type="String"/>
+    <aura:attribute name="CourseStartDate" 					type="String"/>
+    <aura:attribute name="CourseEndDate"   					type="String"/>
+    <aura:attribute name="IndexPosition"   					type="integer"/>
+    <aura:attribute name="buttonlabel"     					type="String"/>
+    <aura:attribute name="iSEditRecord"    					type="Boolean"      default="false;"/>
+    <aura:attribute name="selTabId"        					type="string"       default="declaration" /> 
+    <aura:attribute name="dateValidationError" 				type="boolean" 		default="false"/>
+    <aura:attribute name="courseRegPEId"     			    type="String"/>
+    <aura:attribute name="SubmitPopUpForPE" 				type="boolean" 		default="false"/>
+    <aura:attribute name="SaveAsDraftPopUpForPE" 			type="boolean" 		default="false"/>
+    <aura:attribute name="editPdpa" 						type="boolean" 		default="false"/>
+    <aura:attribute name="editMarketing" 					type="boolean" 		default="false"/>
+    <!-- Variable attributes End -->
+    
+    <!-- Auro handler attributes Start -->
+    <aura:handler name="init"   	value="{!this}"       		 action="{!c.onInit}" />
+    <aura:handler name="change" 	value="{!v.searchContactId}" action="{!c.itemsChange}"/>
+    <aura:method  name="barMethod"  action="{!c.onInit}" 		     description="bar controller function" />
+    <!-- Auro handler attributes End -->
+    
+    
+    <!--MVP1.1: added by Devender:13th April 2021 to show warring for Promo Code START -->
+    <aura:attribute name="PromoCodeNonMemberValue" type="String" default="" />
+    <aura:attribute name="PromoCodeApply" type="Boolean" default="false"/>
+    <aura:attribute name="PromoCodeMemberValue" type="String" default="" />
+    <aura:attribute name="PromoCode" type="String" default="" />
+    <aura:attribute name="PromoCodeValue" type="String" default="" />
+    <aura:attribute name="PromoCodeId" type="String" default="" />
+    <aura:attribute name="courseRunStartDate" type="String" default="" />
+    <aura:attribute name="discountMsg" type="String" default="" />
+    <aura:attribute name="MemberPrice" type="String" default="" />
+    <aura:attribute name="NonMemberPrice" type="String" default="" />
+    <aura:attribute name="courseId" type="Id"/> 
+    <!--MVP1.1: added by Devender:13th April 2021 to show warring for Promo Code END -->
+    
+    <!--MVP1.1: added by Devender:19th April 2021 for PE START -->
+    <aura:attribute name="CourseIdPE" 			type="String" />
+    <aura:attribute name="courseRunStartDatePE" type="String" />
+    <!--MVP1.1: added by Devender:19th April 2021 for PE END -->
+    
+    
+    
+    <!-- In line Css for toast Message Start -->
+    <aura:html tag="style">
+        .toastMessage.forceActionsText{
+        white-space : pre-line !important;
+        }
+    </aura:html>
+    <!-- In line Css for toast Message End style="background-color: white;padding: 10px;width: 102%;margin-left: -1%;" -->
+    
+     {!v.modalBody}
+    
+    <div aura:id='MainDiv' >
+        <div class="slds-section slds-is-open" style="background-color: white">
+            <div aria-hidden="false" class="slds-section__content">
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_12-of-12" style="font-weight: 900;text-align: center;font-size: 25px;">Bulk Registration</div>
+                </div>
+            </div>
+            <div aria-hidden="false" class="slds-section__content">
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-12" style="font-weight: 900;">Course</div>
+                    <div class="slds-col slds-size_1-of-12" style="margin-left: -50px;">:</div>
+                    <div class="slds-col slds-size_3-of-12" style="margin-left: -94px;">{!v.courseRunRecord.Certificate_Course_Name__c}</div>
+                    <div class="slds-col slds-size_7-of-12"></div>
+                </div>
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-12" style="font-weight: 900;">Date</div>
+                    <div class="slds-col slds-size_1-of-12" style="margin-left: -50px;">:</div>
+                    <div class="slds-col slds-size_3-of-12" style="margin-left: -94px;">{!v.CourseStartDate} - {!v.CourseEndDate}</div>
+                    <div class="slds-col slds-size_7-of-12"></div>
+                </div>
+            </div>
+            
+            <aura:if isTrue="{!v.source}">
+                <div aria-hidden="false" class="slds-section__content">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_1-of-12" style="font-weight: 900;">Account</div>
+                        <div class="slds-col slds-size_1-of-12" style="margin-left: -50px;">:</div>
+                        <div class="slds-col slds-size_3-of-12" style="margin-left: -94px;">{!v.AccountName}</div>
+                        <div class="slds-col slds-size_7-of-12"></div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_1-of-12" style="font-weight: 900;">Spoc</div>
+                        <div class="slds-col slds-size_1-of-12" style="margin-left: -50px;">:</div>
+                        <div class="slds-col slds-size_3-of-12" style="margin-left: -94px;">{!v.ContactName}</div>
+                        <div class="slds-col slds-size_7-of-12"></div>
+                    </div>
+                </div>
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!v.declineModalOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">  
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeDeclineModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/> 
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                            Declaration
+                        </h2>
+                    </header> 
+                    <!-- MODAL BOX BODY Part Start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationDeclineMsg} </p>
+                    </div>                   
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div> 
+        </aura:if> 
+        
+        <lightning:tabset selectedTabId="{!v.selTabId}">
+            <aura:if isTrue="{!v.declaration}">
+                <lightning:tab label="Declaration" id="declaration">
+                    <div>
+                        <h2><b>Registration and Payment</b></h2>
+                        <span>
+                            A place will be reserved for you upon receipt of your web registration. Please inform us in writing of any change (withdrawal or postponement) in your registration 14 days prior to commencement of programme, after which 25% of course fee will be chargeable. If no notification is received by commencement date, the full course fee will be charged.<br /><br />
+                            
+                            Please send your payment to us by the closing date. All cheques/bank drafts must be made payable to 'Singapore Institute of Management Group Limited', crossed and marked 'A/C payee only' with the course title(s) indicated on the back of the cheques. Upon receipt of payment, an official receipt will be issued to you. Please retain your official receipt. An administrative fee of $5.35 (inclusive of 7% GST) will apply for each reprint request.
+                        </span>
+                        <br />
+                        <br />
+                        
+                        <aura:if isTrue="{!v.courseRunRecord.Course__r.Funding__c != null}">
+                            <h2><b>Skillsconnect</b></h2>
+                            <span>
+                                Please log onto skillsconnect - https://www.skillsconnect.gov.sg and apply for the SkillsFuture Singapore Training Grant and Absentee Payroll.<br />
+                                For unsuccessful training grant application, the full course fee will apply.<br />
+                                Should we not receive your SkillsFuture Singapore training grant application 2 weeks before class commencement, we may release your placement(s).
+                            </span> 
+                            <br />
+                            <br />
+                        </aura:if>   
+                        <h2><b>Refund of Fees</b></h2>
+                        <span>
+                            If notice of withdrawal or postponement is given in writing:<br />
+                            100% refund for written notification 14 days before commencement<br />
+                            75% refund for written notification within 14 days before commencement<br />
+                            After commencement / No show - No refund<br />
+                        </span>
+                        <br />
+                        <h2><b>Changes to Programme</b></h2>
+                        <span>Changes in programme date, time, fees and speakers may occur due to unforeseen circumstances. However, SIM will ensure that every effort will be made to inform participants of the change. SIM reserves the right to cancel the programme due to unforeseen circumstances.</span>
+                        <br />
+                        <br />
+                        
+                        <div class="slds-grid slds-gutters">
+                            <div style="padding-left:12px">
+                                <span><ui:inputCheckbox aura:id="checkbox" name="checkbox" /> </span>
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                                <span>Your registration will be processed with your consent to the 
+                                    Registration Terms and Conditions
+                                    and agreement governing personal data protection which can be accessed 
+                                    <!-- a href="https://pd.sim.edu.sg/personal-data-protection-policy">here</a--></span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            
+                        </div>
+                        <br />
+                         <div class="slds-grid slds-gutters">
+                            <div style="padding-left:12px">
+                                <span>
+                                    <ui:inputCheckbox aura:id="checkbox_pdpa" name="checkbox_pdpa" change="{!c.onClickPdpa}" />
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                                <span class="slds-form-element__label slds-no-flex">
+                                    <span style="color: #C23934">*</span>
+                                    
+                                    <span style="color: #000000">
+                                        With submission of this form, you agree that SIM will collect, use or/and disclose your personal data, as provided in this form, for the purposes of programmes and general enquiries in accordance with the Personal Data Protection Act 2012.     
+                                    </span>
+                                    </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>                   
+                        </div> 
+                        <br />
+                        <div class="slds-grid slds-gutters">
+                            <div style="padding-left:12px">
+                                <span>
+                                    <ui:inputCheckbox aura:id="checkbox_marketing" name="checkbox_marketing"/> 
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                                <span class="slds-form-element__label slds-no-flex" style="color: #000000">
+                                    You will like to receive updates, promotions and any other marketing materials and messages from SIM.
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                        </div> 
+                        
+                        <div class="slds-float--right">
+                            <lightning:button variant="brand" label="Accept" title="Accept" onclick="{!c.handleAcceptClick}" />
+                            <lightning:button variant="brand" label="Decline" title="Decline" onclick="{!c.handleDeclineClick}"/>
+                        </div>
+                        
+                    </div>
+                </lightning:tab>
+            </aura:if>
+            <!-- Success Message on isOpen -->
+            <aura:if isTrue="{!v.isOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Course is currently unavailable</h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p> {!$Label.c.CourseRegistration_InactiveMsg}
+                                <!-- desmond 201015
+                            Please click <a href="http://simpd.bluecube.com.sg" style="color:blue">here</a> to verify the Details </p>
+                            -->
+                                Please click <a href="{!$Label.c.Public_URL}" style="color:blue">here</a> to verify the Details </p>
+                        </div>                   
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            <!-- Accept popup -->
+            <aura:if isTrue="{!v.acceptModalOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                Declaration
+                            </h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationAcceptMsg} </p>
+                        </div>   
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral" 
+                                              label="Ok"
+                                              title="Ok"
+                                              onclick="{!c.onclickOk}"/>
+                        </footer>
+                        
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            <!-- PDPAModalOpen -->
+             <aura:if isTrue="{!v.PDPAModalOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                PDPA Consent
+                            </h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationpdpaMsg} </p>
+                        </div>   
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral" 
+                                              label="Ok"
+                                              title="Ok"
+                                              onclick="{!c.onclickOkPdpa}"/>
+                        </footer>
+                        
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+           <!--  EmailError -->
+            
+            <aura:if isTrue="{!v.EmailError}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                Duplicate Email Error
+                            </h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-align_absolute-center"> {!$Label.c.CourseRegistrationduplicateEmailMsg} </p>
+                        </div>   
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral" 
+                                              label="Ok"
+                                              title="Ok"
+                                              onclick="{!c.onclickOkEmailError}"/>
+                        </footer>
+                        
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            <aura:if isTrue="{!v.SaveAsDraftPopUpForPE}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <!-- header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Payment</h2>
+                        </header --> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div style="text-align: center;" class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p> {!$Label.c.CourseRegistrationSaveAsDraftMsg} </p>
+                        </div> 
+                        <footer class="slds-modal__footer">
+                            <!--lightning:button variant="neutral" 
+                                              label="Later"
+                                              title="Later"
+                                              onclick="{!c.closeModelLaterPE}"/ -->
+                            <lightning:button variant="brand" 
+                                              label="Yes"
+                                              title="Yes"
+                                              onclick="{!c.redirectToPaymentPE}"/>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            <aura:if isTrue="{!v.SubmitPopUpForPE}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <!-- header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Payment</h2>
+                        </header --> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div style="text-align: center;" class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p> {!$Label.c.CourseRegistrationCompletePE} </p>
+                        </div> 
+                        <footer class="slds-modal__footer">
+                            <!--lightning:button variant="neutral" 
+                                              label="Later"
+                                              title="Later"
+                                              onclick="{!c.closeModelLaterPE}"/ -->
+                            <lightning:button variant="brand" 
+                                              label="Yes"
+                                              title="Yes"
+                                              onclick="{!c.redirectToPaymentPE}"/>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            
+            <!-- Payment -->
+            <aura:if isTrue="{!v.PaymentModalOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Payment</h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p> {!$Label.c.CourseRegistration_Payment} </p>
+                        </div> 
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral" 
+                                              label="Later"
+                                              title="Later"
+                                              onclick="{!c.closeModelLater}"/>
+                            <lightning:button variant="brand" 
+                                              label="Yes"
+                                              title="Yes"
+                                              onclick="{!c.redirectToPayment}"/>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            <!-- Invalid NRIC popup -->
+            <aura:if isTrue="{!v.NricModalOpen}">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">  
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeNricModel}"
+                                                  alternativeText="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"/> 
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">  
+                                NRIC Alert
+                            </h2>
+                        </header> 
+                        <!-- MODAL BOX BODY Part Start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-align_absolute-center"> 
+                                <aura:if isTrue="{!v.NricLengthValidation}">
+                                    Invalid NRIC and length of Nric is not matched
+                                </aura:if>
+                                <aura:if isTrue="{!v.NricFirstCharValidation}">
+                                    First character of NRIC is not Invalid
+                                </aura:if>
+                                <aura:if isTrue="{!v.NricMiddleValValidation}">
+                                    Invalid: NRIC Middle values is not a number
+                                </aura:if>
+                                <aura:if isTrue="{!v.NricEndCharValidation}">
+                                    Invalid end Character
+                                </aura:if>
+                                <aura:if isTrue="{!v.NricNotNull}">
+                                    NRIC should not null
+                                </aura:if>
+                            </p>
+                        </div>                   
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div> 
+            </aura:if>
+            
+            <aura:if isTrue="{!v.particulars}">
+                <lightning:tab label="Particulars" id="particulars">
+                    
+                    
+                    <lightning:recordEditForm objectApiName="Course_Registration__c" 
+                                              aura:id="regForm"
+                                              onsuccess="{!c.handleOnSuccess}"
+                                              onerror="{!c.handleError}"
+                                              onsubmit="{!c.handleOnSubmit}">
+                        <lightning:messages />
+                        
+                        <!--loading spinner start... style=Brand Medium (blue dots)-->
+                        <aura:if isTrue="{!v.Spinner}">
+                            <div aura:id="spinnerId" class="slds-spinner_container">
+                                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                                    <span class="slds-assistive-text">Please wait..</span>
+                                    <div class="slds-spinner__dot-a"></div>
+                                    <div class="slds-spinner__dot-b"></div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <!-- Loading spinner end-->   
+                        
+                        <div class="slds-section slds-is-open">
+                            <div aria-hidden="false" class="slds-section__content">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_2-of-12">
+                                        <p style="color: blue;">Existing Learner?</p>
+                                    </div>
+                                    <div class="slds-col slds-size_4-of-12">
+                                        <div   style="margin-top: -18px;">
+                                            <c:LookupForCourseRegistration
+                                                                                  object="Contact"
+                                                                                  searchField="Name"
+                                                                                  placeholder="Select existing learner"
+                                                                                  iconName="standard:account"
+                                                                                  order="Name"                     
+                                                                                  aura:id="courseRun"
+                                                                                  showRecentRecords = "true"
+                                                                                  loadingMessage="Loading..."
+                                                                                  errorMessage="Invalid input"
+                                                                                  filter="{!'AccountId = \'' + v.accid + '\''}"
+                                                                                  label=""
+                                                                                  value="{!v.searchContactId}"
+                                                                                  />
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12">
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <div style="margin-left: 36%;width: 100%;margin-top: -19px;">
+                                            <aura:if isTrue="{!v.piiSection}">
+                                                <a style="color:blue" href="{!$Resource.FundedTemplate}" target="_blank">Download here for the Registration template.</a>
+                                                
+                                            </aura:if>
+                                            <aura:if isTrue="{!!v.piiSection}">
+                                                <div placeholder="hi this..">
+                                                    <a style="color:blue" data-toggle="tooltip" data-placement="top" title="Please download this xlsx file and convert it in csv file.." href="{!$Resource.NonFundedTemplate}" target="_blank">Download here for the Registration template.</a>
+                                                </div>
+                                            </aura:if>
+                                            
+                                            <lightning:input variant="label-hidden" name="file1" type="file" aura:id="file"  onchange="{! c.file }"/>
+                                            <div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-12" >
+                                        <div style="float: right;">
+                                            <lightning:button 
+                                                              variant="brand" 
+                                                              name="Upload File" 
+                                                              label="Process file" 
+                                                              onclick="{!c.savefile}" 
+                                                              class="{!v.disableClass}"/>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="slds-section slds-is-open">
+                            <h3 class="slds-section__title slds-theme_shade ">
+                                <span class="slds-truncate slds-p-horizontal_small slds-text-heading_medium slds-theme_backgroundColor-lightblue" title="Participant Details"><b>Participant Details</b></span>
+                            </h3>
+                            <div aria-hidden="false" class="slds-section__content">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    
+                                    <div class="slds-col slds-size_1-of-2" style="Display:none" >
+                                        <lightning:inputField  aura:id="ContactRecordId" fieldName="Contact__c" 
+                                                              value="{!if(v.EditCourseRegistrationList[0].Contact__c != '',v.EditCourseRegistrationList[0].Contact__c,'')}" />
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2"  style="Display:none">
+                                        <lightning:inputField  aura:id="RecordId" fieldName="Id"
+                                                              value="{!if(v.EditCourseRegistrationList[0].Id != '',v.EditCourseRegistrationList[0].Id,'')}" />
+                                    </div>
+                                    
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField name="test" required="true" aura:id="salutationId" fieldName="Salutation__c" 
+                                                              value="{!if(v.EditCourseRegistrationList[0].Salutation__c != '',v.EditCourseRegistrationList[0].Salutation__c,'')}" />
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField name="test" required = "true" aura:id="fNameId" fieldName="First_Name__c" onchange="{!c.firstOrLastNameChange}" value="{!if(v.EditCourseRegistrationList[0].First_Name__c != '',v.EditCourseRegistrationList[0].First_Name__c,'')}"/>                                
+                                    </div>	                                                
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField required = "true" aura:id="lNameId" fieldName="Last_Name__c" onchange="{!c.firstOrLastNameChange}"  value="{!if(v.EditCourseRegistrationList[0].Last_Name__c != '',v.EditCourseRegistrationList[0].Last_Name__c,'')}"/> 
+                                    </div> 
+                                    <!-- div class="slds-col slds-size_1-of-2">
+                                <lightning:inputField  required = "true" aura:id="dobId" 
+                                                      class="{! v.dateValidationError ? 'slds-has-error' : ''}"
+                                                      fieldName="Date_of_Birth__c" 
+                                                      onchange="{!c.dateOfBirthChange}"
+                                                      value="{!if(v.EditCourseRegistrationList[0].Date_of_Birth__c != '',v.EditCourseRegistrationList[0].Date_of_Birth__c,'')}"/> 
+                                <aura:if isTrue="{!v.dateValidationError}">
+                                    <div class="slds-text-color_error slds-p-left_x-small slds-text-body_small">
+                                        Date should not be future date.
+                                    </div>
+                                </aura:if>
+                            </div -->
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField required = "true" aura:id="prefCertificateId" fieldName="Preferred_Certificate_Name__c" 
+                                                              value="{!if(v.EditCourseRegistrationList[0].Preferred_Certificate_Name__c != '',v.EditCourseRegistrationList[0].Preferred_Certificate_Name__c,'')}"/> 
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <!--Desmond 2101151200 Amend to false-->
+                                        <lightning:inputField required = "true" aura:id="genderId" fieldName="Gender__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Gender__c != '',v.EditCourseRegistrationList[0].Gender__c,'')}"/> 
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <!-- div class="slds-col slds-size_1-of-2">
+                                <lightning:inputField required = "true" aura:id="MblenoId" label="Contact Number" fieldName="Mobile_No__c" 
+                                                      value="{!if(v.EditCourseRegistrationList[0].Mobile_No__c != '',v.EditCourseRegistrationList[0].Mobile_No__c,'')}"/> 
+                            </div -->
+                                    
+                                      <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="NationalityId" fieldName="Nationality__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Nationality__c != '',v.EditCourseRegistrationList[0].Nationality__c,'')}"/> 
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <aura:if isTrue="{!v.source}">
+                                            <div style="color:rgba(0,0,0);font-size: 12px;margin-top: 10px;">
+                                                <abbr title="required" class="slds-required">*</abbr>
+                                                Contact No
+                                            </div>
+                                        </aura:if>
+                                        <aura:if isTrue="{!!v.source}">
+                                            <div style="color:rgba(10, 50, 198, 0.74);font-size: 12px;margin-top: 10px;">
+                                                <abbr title="required" class="slds-required">*</abbr>
+                                                Contact No
+                                            </div>
+                                        </aura:if>
+                                        <div  style="margin-left: 33%;margin-top: -4%;"> 
+                                            <lightning:inputField variant="label-hidden" required = "true" aura:id="MblenoId" label="Contact Number" fieldName="Mobile_No__c" 
+                                                                  value="{!if(v.EditCourseRegistrationList[0].Mobile_No__c != '',v.EditCourseRegistrationList[0].Mobile_No__c,'')}"/> 
+                                            
+                                        </div>
+                                    </div> 
+                                    
+                                  
+                                    <!-- div class="slds-col slds-size_1-of-2">
+                                <lightning:inputField fieldName="Home_No__c"    aura:id="HomeNoId"
+                                                      value="{!if(v.EditCourseRegistrationList[0].Home_No__c != '',v.EditCourseRegistrationList[0].Home_No__c,'')}"/> 
+                            </div -->
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="EmploymentStatus" fieldName="Employment_Status__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Employment_Status__c != '',v.EditCourseRegistrationList[0].Employment_Status__c,'')}"/> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="JobTitle" fieldName="Job_Title__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Job_Title__c != '',v.EditCourseRegistrationList[0].Job_Title__c,'')}"/> 
+                                    </div>
+                                    
+                                    
+                                     <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="DesignationLevel" fieldName="Designation_Level__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Designation_Level__c != '',v.EditCourseRegistrationList[0].Designation_Level__c,'')}"/> 
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="ofceNoId" fieldName="Office_No__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Office_No__c != '',v.EditCourseRegistrationList[0].Office_No__c,'')}"/> 
+                                    </div>
+                                    
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.piiSection}">
+                            <div class="slds-section slds-is-open"  >
+                                <h3 class="slds-section__title slds-theme_shade ">
+                                    <span class="slds-truncate slds-p-horizontal_small slds-text-heading_medium slds-theme_backgroundColor-lightblue" title="Participant Details"><b></b>Personal Identified Information (PII)</span>
+                                </h3>
+                                
+                                <div aria-hidden="false" class="slds-section__content">
+                                    <div class="slds-grid slds-gutters slds-wrap">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:inputField required = "true" fieldName="NRIC_Type__c" aura:id="NricTypeId"  
+                                                                  value="{!if(v.EditCourseRegistrationList[0].NRIC_Type__c != '',v.EditCourseRegistrationList[0].NRIC_Type__c,'')}"/> 
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:inputField  required = "true" fieldName="NRIC__c" aura:id="NricId" 
+                                                                  value="{!if(v.EditCourseRegistrationList[0].NRIC__c != '',v.EditCourseRegistrationList[0].NRIC__c,'')}"/> 
+                                            
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <lightning:inputField  required = "true" aura:id="dobId" 
+                                                                  class="{! v.dateValidationError ? 'slds-has-error' : ''}"
+                                                                  fieldName="Date_of_Birth__c" 
+                                                                  onchange="{!c.dateOfBirthChange}"
+                                                                  value="{!if(v.EditCourseRegistrationList[0].Date_of_Birth__c != '',v.EditCourseRegistrationList[0].Date_of_Birth__c,'')}"/> 
+                                            <aura:if isTrue="{!v.dateValidationError}">
+                                                <div class="slds-text-color_error slds-p-left_x-small slds-text-body_small">
+                                                    Date should not be future date.
+                                                </div>
+                                            </aura:if>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- div aria-hidden="false" class="slds-section__content">
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning:inputField required = "true" fieldName="NRIC_Type__c" aura:id="NricTypeId"  
+                                                          value="{!if(v.EditCourseRegistrationList[0].NRIC_Type__c != '',v.EditCourseRegistrationList[0].NRIC_Type__c,'')}"/> 
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning:inputField  required = "true" fieldName="NRIC__c" aura:id="NricId" 
+                                                          value="{!if(v.EditCourseRegistrationList[0].NRIC__c != '',v.EditCourseRegistrationList[0].NRIC__c,'')}"/> 
+                                    
+                                </div>
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning:inputField  required = "true" aura:id="dobId" 
+                                                          class="{! v.dateValidationError ? 'slds-has-error' : ''}"
+                                                          fieldName="Date_of_Birth__c" 
+                                                          onchange="{!c.dateOfBirthChange}"
+                                                          value="{!if(v.EditCourseRegistrationList[0].Date_of_Birth__c != '',v.EditCourseRegistrationList[0].Date_of_Birth__c,'')}"/> 
+                                    <aura:if isTrue="{!v.dateValidationError}">
+                                        <div class="slds-text-color_error slds-p-left_x-small slds-text-body_small">
+                                            Date should not be future date.
+                                        </div>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </div -->
+                            </div>
+                        </aura:if>
+                        
+                        
+                        <br />
+                        <div class="slds-section slds-is-open"  >
+                            <h3 class="slds-section__title slds-theme_shade ">
+                                <span class="slds-truncate slds-p-horizontal_small slds-text-heading_medium slds-theme_backgroundColor-lightblue" title="Participant Details"><b></b>Email &amp; User Account Details</span>
+                            </h3>
+                            <div aria-hidden="false" class="slds-section__content">
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_1-of-2" style="margin-left: 13px;">
+                                        <b>Guidelines for Email &amp; User Account</b>
+                                        <p>1. Please indicate Yes, if this learner needs a login account? </p>
+                                        <p>2. This allows learner to login to view their Certs and learning journey with SIM</p>
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-gutters slds-wrap">
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField  aura:id="NeedUserAccount" fieldName="Need_User_Account__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Need_User_Account__c != '',v.EditCourseRegistrationList[0].Need_User_Account__c,'')}"/> 
+                                    </div> 
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField required = "true" aura:id="emailId" fieldName="Email_Address__c"  
+                                                              value="{!if(v.EditCourseRegistrationList[0].Email_Address__c != '',v.EditCourseRegistrationList[0].Email_Address__c,'')}" /> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        
+                        <div class="slds-float--right">
+                            <lightning:button 
+                                              variant="brand" 
+                                              type="submit" 
+                                              name="AddLearner"
+                                              label="Add Learner" 
+                                              onclick="{!c.AddLearner}"/> 
+                        </div>
+                        <br/>
+                        <!-- Success Message on Save Draft -->
+                        <aura:if isTrue="{!v.isDraftOpen}">
+                            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                <div class="slds-modal__container">  
+                                    <header class="slds-modal__header">
+                                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"></h2>
+                                    </header> 
+                                    <!-- MODAL BOX BODY Part Start -->
+                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                        <p> {!$Label.c.CourseRegistration_DraftMsg}
+                                            Click <a href="{!'/s/course-registration/'+v.courseRegistrationId}" style="color:blue">here</a> to go your registration information
+                                        </p>
+                                    </div>                   
+                                </div>
+                            </section>
+                            <div class="slds-backdrop slds-backdrop_open"></div> 
+                        </aura:if>
+                        
+                        <!-- Executive Modal Popup -->
+                        <aura:if isTrue="{!v.isExecutiveModalOpen}">
+                            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                <div class="slds-modal__container">  
+                                    <header class="slds-modal__header">
+                                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Thank you for Registering</h2>
+                                    </header> 
+                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                        <p> {!$Label.c.CourseRegistration_ExecutiveMsg} </p>
+                                    </div>    
+                                    <footer class="slds-modal__footer">                       
+                                        <lightning:button variant="brand" 
+                                                          label="Ok"
+                                                          title="Ok"
+                                                          onclick="{!c.redirectToHome}"/>
+                                    </footer>
+                                </div>
+                            </section>
+                            <div class="slds-backdrop slds-backdrop_open"></div> 
+                        </aura:if>
+                        
+                        
+                        <br/>
+                        <br/>
+                    </lightning:recordEditForm>
+                    <aura:if isTrue="{!not(empty(v.CourseRegistrationList))}">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Opportunity Name"> Name</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Account Name">Email</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Close Date">Contact No</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Close Date">Gender</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Close Date">
+                                           <span style="margin-left: 10%; position: relative;top: 10px;">Need User account?</span><span style="margin-top: -15px;"> <ui:inputCheckbox aura:id="selectAllId" change="{!c.selectAllCheckbox}"/></span> 
+                                        </div>
+                                        
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Close Date">Action</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration var="courseReg" items="{!v.CourseRegistrationList}" indexVar="index">   
+                                    <tr class="slds-hint-parent">
+                                        <td data-label="" style="Display:none">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.Id}</div>
+                                        </td>
+                                        <td data-label="" style="Display:none">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.Contact__c}</div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.First_Name__c}&nbsp;{!courseReg.Last_Name__c} </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.Email_Address__c}</div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.Mobile_No__c}</div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-truncate" title="Cloudhub">{!courseReg.Gender__c}</div>
+                                        </td>
+                                        <td data-label="">
+                                        <ui:inputCheckbox  value="{!courseReg.isChecked}"/>
+                                        </td>
+                                        <td data-label="Account Name">
+                                            <div class="slds-truncate" title="Cloudhub" style="margin-left: -17px;">
+                                                <lightning:layoutItem size="1" padding="around-small">
+                                                    <a href="" name="{!index}"  onclick="{!c.EditLearner}">
+                                                        <lightning:icon iconName="utility:edit" alternativeText="edit" size="small"/>
+                                                    </a>
+                                                    <a href="" name="{!index}" onclick="{!c.remove}">
+                                                        <lightning:icon iconName="utility:delete" alternativeText="delete" size="small"/>
+                                                    </a>
+                                                </lightning:layoutItem>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <!--mvp1.1: added by Devender to show the Promo Code START Promo_Code__c-->
+                        <div class="slds-grid slds-gutters slds-wrap paddingBottom">
+                            <div class="slds-col slds-size_1-of-4 slds-text-title_bold "> Promo Code:
+                            </div>
+                            <div class="slds-col slds-size_2-of-4 PromoCodeTextBox"> 
+                                <!-- lightning:inputtext  value = ""  aura:id ="PromoCode"  /-->
+                                <lightning:input type="text" value="{!v.PromoCodeValue}" aura:id ="PromoCode" ></lightning:input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning:button class="" variant="brand" label="Apply Promo code" title="Apply Promo code" onclick="{!c.applyPromocode}"/>
+                            </div>  
+                        </div>
+                        <br/><br/>
+                        <aura:if isTrue="{!v.PromoCodeApply}">
+                            <div class="slds-grid slds-gutters slds-wrap paddingBottom">
+                                <div class=" slds-col slds-size_10-of-12">
+                                    <form>
+                                        <fieldset class="myFieldset">
+                                            <legend class="myLegend">Promo Code Applied</legend>
+                                            <aura:if isTrue="{!not(empty(v.PromoCodeMemberValue))}">
+                                                <div class="slds-col slds-size_1-of-4 slds-text-title_bold "> Member Price: </div>
+                                                <div class="slds-col slds-size_2-of-4 slds-box slds-box_x-small PromoCodePriceTextBox"> 
+                                                    <lightning:formattedNumber type="text"  value="{!v.PromoCodeMemberValue}" aura:id ="PromoCodeMember" disabled='true' style="currency" currencyCode="SGD" currencyDisplayAs="symbol" />  
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-4"></div>
+                                                <div class="slds-col slds-size_1-of-4 slds-text-title_bold">(* Prices are inclusive of GST)</div>
+                                            </aura:if>
+                                            <br/>
+                                            <aura:if isTrue="{!not(empty(v.PromoCodeNonMemberValue))}">
+                                                <div class="slds-col slds-size_1-of-4 slds-text-title_bold "> Non Member Price: </div>
+                                                <div class="slds-col slds-size_2-of-4 slds-box slds-box_x-small PromoCodePriceTextBox"> 
+                                                    <lightning:formattedNumber type="text"  value="{!v.PromoCodeNonMemberValue}" aura:id ="PromoCodeNonMember" disabled='true' style="currency" currencyCode="SGD" currencyDisplayAs="symbol" />  
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-4"></div>
+                                                <div class="slds-col slds-size_1-of-4 slds-text-title_bold">(* Prices are inclusive of GST)</div>
+                                            </aura:if>
+                                            <br/>
+                                            <aura:if isTrue="{!not(empty(v.discountMsg))}">
+                                                <div class="slds-col slds-size_12-of-12 slds-text-title_bold">{!v.discountMsg}</div>
+                                            </aura:if>
+                                            <div class="slds-col slds-size_12-of-12">
+                                                <lightning:button class="slds-float--right RemovePromoCodeButton" variant="brand" label="Remove Promo code" title="Remove Promo code" onclick="{!c.RemovePromocode}"/>
+                                            </div>
+                                            <br/>
+                                            
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </aura:if>
+                        
+                        <!--mvp1.1: added by Devender to show the Promo Code END-->
+                        <br/>
+                        <br/>
+                        <div class="slds-float--right">
+                            <lightning:button variant="brand" type="submit" name="Save as Draft" label="Save as Draft" onclick="{!c.handleSaveAsDraft}"/>
+                            <lightning:button variant="brand" type="submit"  name="Save" label="Submit" onclick="{!c.handleSubmit}"/>               		
+                            <!-- lightning:button label="Call server" onclick="{!c.handleSubmit}"/ -->
+                        </div>
+                    </aura:if>
+                </lightning:tab>    
+            </aura:if>
+            
+            <aura:if isTrue="{!v.Payment}">
+                <lightning:tab label="Payment" id="Payment">
+                    <lightning:messages />
+                    <c:Payment recordId = "{!v.invoiceId}"/>
+                </lightning:tab>
+            </aura:if>
+        </lightning:tabset>
+    </div>
+</aura:component>

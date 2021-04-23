@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Who_Should_Enroll_MPL__c</name>
+    <picklistValues>
+        <masterLabel>Level 1 - Admin &amp; Support</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 2 - Supervisor, Executive, &amp; Emerging Managers</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 3 - New Managers</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 4 - Managers</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 5 - Senior Managers &amp; Directors</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level 6 - C-Suite</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percentage_Discount</fullName>
+    <active>true</active>
+    <description>For Percentage based discounts, the maximum amount is 100</description>
+    <errorConditionFormula>IF( Percentage__c, Amount__c&gt;100 || GST_Amount__c &gt; 100,FALSE)</errorConditionFormula>
+    <errorMessage>For Percentage based discounts, the maximum amount is 100</errorMessage>
+</ValidationRule>

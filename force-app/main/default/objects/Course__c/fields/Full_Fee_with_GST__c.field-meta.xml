@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Fee_with_GST__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(GST_Mode__c, &apos;Full&apos;), (Full_Fee__c +   ROUND(Full_Fee_GST_Amount__c,2)) , IF(ISPICKVAL(GST_Mode__c, &apos;Nett&apos;),Round(Full_Fee__c,2),Full_Fee__c + Round(Full_Fee_GST_Amount__c,2)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Full Fee with GST</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

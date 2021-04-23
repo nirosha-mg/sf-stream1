@@ -1,0 +1,79 @@
+.THIS {
+}
+h2.THIS {
+    font-weight: 'bold';
+}
+.THIS .slds-theme_backgroundColor-lightblue {
+    background-color: #0156A5;    
+    width: 1400px;
+    color: white;
+    font-size: 14px;
+    
+}
+.THIS .boldStyle{
+    font-weight: 'bold';
+}
+.THIS .slds-box_x-small {
+	height: 30px;    
+     background-color: var(--lwc-colorBackgroundInputDisabled,rgb(233, 234, 236));
+    border-color: var(--lwc-colorBorderInputDisabled,rgb(196, 198, 202));
+}
+.THIS .myCheckbox{
+  display: inline-block;
+  float: left;
+}
+.THIS .paddingBottom {
+    padding-bottom: 20px;
+}
+.THIS .slds-tabs_default__item {
+    pointer-events: none;
+}
+.THIS .slds-no-flex {
+   margin-top: -3px;
+}
+.THIS .errorMsgStyle {
+   width : 300px;
+}
+/*Sanjay 2/22/2021: Set the disableButton class in the disableClass variable to prevent the multiple clicks*/
+.THIS .disableButton {
+   cursor: not-allowed;
+   pointer-events: none;
+}
+/*Devender 4/12/2021: Set the borderPromoCode class in the div for border*/  
+.THIS .borderPromoCode {
+ border-style:solid;
+ border-color: rgb(171 173 176);
+ width: 76%;
+ padding: 2%;
+ padding-left: 0%;
+}
+.THIS .PromoCodeTextBox{
+ width: 40%;
+ margin-left: -1%;
+}
+.THIS .PromoCodePriceTextBox {
+    margin-left: 30%;
+    width: 70%;
+    margin-top: -2%;
+}
+.THIS .myFieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 82px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove;
+    
+}
+ 
+.THIS .myLegend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+.THIS .RemovePromoCodeButton{
+   margin-right: 43%;
+}
