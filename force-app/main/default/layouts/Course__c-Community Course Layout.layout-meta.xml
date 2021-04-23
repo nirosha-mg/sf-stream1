@@ -27,6 +27,10 @@
                 <behavior>Required</behavior>
                 <field>Payment_Option__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Active_Test__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

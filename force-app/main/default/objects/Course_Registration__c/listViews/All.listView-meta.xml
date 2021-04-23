@@ -18,7 +18,6 @@
     <filters>
         <field>Course_Title__c</field>
         <operation>contains</operation>
-        <value>sgus</value>
     </filters>
     <label>All</label>
 </ListView>

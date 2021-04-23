@@ -1,0 +1,8 @@
+<apex:page standardController="Course_Registration__c" recordSetVar="Acc" extensions="PassSelectedIdsToFlowVFController" lightningStylesheets="true">
+    
+    <flow:interview name="Mass_Action_List_View_Flow">
+        <!-- IDs is flow input variable & SelectedIDs is a property in the Apex controller -->
+        <apex:param name="IDs" value="{!SelectedIDs}" />
+    </flow:interview>
+    
+</apex:page>

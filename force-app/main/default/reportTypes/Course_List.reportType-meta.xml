@@ -525,6 +525,11 @@
             <field>Meta_Tags__c</field>
             <table>Course__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_Test__c</field>
+            <table>Course__c</table>
+        </columns>
         <masterLabel>Courses</masterLabel>
     </sections>
     <sections>

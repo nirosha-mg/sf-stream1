@@ -326,6 +326,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PassSelectedIdsToFlowVFController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PaymentController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2655,6 +2659,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Course__c.Active_Test__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Course__c.Active__c</field>
         <readable>true</readable>
@@ -4417,6 +4426,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Mass_Action_List_View_Flow</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>ModuleFlowTrigger</flow>
     </flowAccesses>
     <flowAccesses>
@@ -5258,6 +5271,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>MyProfilePage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>PassSelectedIdsToFlowVF</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
