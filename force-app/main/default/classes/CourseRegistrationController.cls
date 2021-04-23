@@ -12,7 +12,7 @@
  * @version     1.0     2020-10-14      BLR\rohit.pal       Change getContactRecord method to get the contact address information
  * @version     1.1     2021-03-05      Poon Koon           Update getContactRecord method to get the PDPA and Marketing consents info
  * @version     1.1     2021-04-13      Devender Singh      Added the getPromoCode method for Promo code functinality 
- * @version     1.2     2021-03-05      Poon Koon           Update getContactRecord method to get the Marketing channels info
+ * @version     1.2     2021-03-05      Poon Koon           Update getContactRecord method to get the Marketing channels info and method to get picklist values
 **************************************************************************************************************/
 public without sharing class CourseRegistrationController {
     
@@ -404,5 +404,30 @@ public without sharing class CourseRegistrationController {
         public Promo_Code__c lstPromoCode  { get; set; }
         @AuraEnabled
         public List<Course_Discount__c > lstDiscount  { get; set; }
+    }
+
+    //2021-04-23 Poon Koon: Get marketing channel picklist values
+    public class picklistValuesWrapper{
+        @AuraEnabled
+        public String label {get; set;}
+        @AuraEnabled
+        public String value {get; set;}
+
+        public picklistValuesWrapper(String label, String value){
+            this.label = label;
+            this.value = value;
+        }
+    }
+
+    /** Get Marketing Channels */
+    @AuraEnabled
+    public static List<picklistValuesWrapper> getMarketingChannels(){
+        List<picklistValuesWrapper> listMarketingChannels = New List<picklistValuesWrapper>();
+        List<Schema.PicklistEntry> ple = Schema.getGlobalDescribe().get('Course_Registration__c').getDescribe().fields.getMap().get('Marketing_Channel_Consented__c').getDescribe().getPicklistValues();
+        for(Schema.PicklistEntry pickListVal: ple) {
+            picklistValuesWrapper marketingChannel = new picklistValuesWrapper(pickListVal.getLabel(), pickListVal.getValue());
+            listMarketingChannels.add(marketingChannel);
+        }
+        return listMarketingChannels;
     }
 }

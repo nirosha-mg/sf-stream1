@@ -580,5 +580,16 @@
             // mode: 'pester'
         });
         toastEvent.fire();
+    },
+    //2021-04-23 Poon Koon: Get Marketing Channels
+    getMarketingChannels:function(component,event){
+        var action =component.get("c.getMarketingChannels");
+        action.setCallback(this,function(response){
+            if(response.getState()==='SUCCESS' && response.getReturnValue()){
+                console.log(' getMarketingChannels response.getReturnValue() >> ' + JSON.stringify(response.getReturnValue()));
+                component.set("v.marketingchanneloptions" , response.getReturnValue());
+            }
+        });
+        $A.enqueueAction(action);
     }
 })

@@ -902,26 +902,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Contact.Marketing_Channel_Email__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.Marketing_Channel_Post__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.Marketing_Channel_Telephone_call__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.Marketing_Channel_Text_Messages__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Contact.Marketing_Consent_Clause__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1563,26 +1543,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Course_Registration__c.Marketing_Channel_Consented__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Course_Registration__c.Marketing_Channel_Email__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Course_Registration__c.Marketing_Channel_Post__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Course_Registration__c.Marketing_Channel_Telephone_call__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Course_Registration__c.Marketing_Channel_Text_Messages__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
