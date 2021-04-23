@@ -140,12 +140,8 @@
 
                 helper.validateFields(component, event,nricIsValid);
             }
-            // Poon Koon 2021-04-22: Add in Marketing Channels check if Marketing consent checkbox is checked.
             var checkVar = component.find("checkbox_pdpa");
-            var checkMarketingVar = component.find("checkbox_marketing");
-            var marketingChannelsChosen = component.get("v.marketingchannelschosen");
-            console.log("marketingChannelsChosen >> " + marketingChannelsChosen);
-            if (checkVar.get("v.value") == false || (checkMarketingVar.get("v.value") == true && marketingChannelsChosen == ""))
+            if (checkVar.get("v.value") == false)
             {
                 //alert('Hello Error');;
                 component.set("v.acceptPDPAOpen",true);
@@ -416,7 +412,12 @@
         // Poon Koon 3/2/2021: Populate consent fields with checkbox values
         eventFields["Marketing_Consent_Clause__c"] = component.find("checkbox_marketing").get("v.value");
         eventFields["PDPA_Consent_Clause__c"] = component.find("checkbox_pdpa").get("v.value");
-        
+        // Poon Koon 3/2/2021: Populate marketing channel fields with checkbox values
+        eventFields["Marketing_Channel_Email__c"] = component.find("checkbox_marketing_email").get("v.value");
+        eventFields["Marketing_Channel_Post__c"] = component.find("checkbox_marketing_post").get("v.value");
+        eventFields["Marketing_Channel_Telephone_call__c"] = component.find("checkbox_marketing_telephone_call").get("v.value");
+        eventFields["Marketing_Channel_Text_Messages__c"] = component.find("checkbox_marketing_text_messages").get("v.value");
+
         var crCode = component.get("v.courseRunCode");
         var getCourseRun = component.get('c.getCourseRunRecord');
         getCourseRun.setParams({courseRunCode: crCode});

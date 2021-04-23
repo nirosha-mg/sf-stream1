@@ -56,15 +56,6 @@
     <aura:attribute name="PromoCodeId" type="String" default="" />
     <aura:attribute name="courseRunStartDate" type="String" default="" />
     <aura:attribute name="discountMsg" type="String" default="" />
-    <!-- Poon Koon 2021-04-22: Marketing channels variables -->
-    <aura:attribute name="marketingchanneloptions" type="List" default="[
-                        {'label': 'Email', 'value': 'Email'},
-                        {'label': 'Text messages', 'value': 'Text messages'},
-                        {'label': 'Telephone call', 'value': 'Telephone call'},
-                        {'label': 'Post', 'value': 'Post'}
-                    ]"/>
-    <aura:attribute name="marketingchannelschosen" type="List" />
-    
     
     {!v.modalBody}
     <div class="slds-m-around_xx-large">
@@ -543,6 +534,7 @@
                             <div class="slds-col slds-size_1-of-2">
                                 <lightning:inputField required="{!if(v.courseRunRecord.CourseRecordType__c == 'Funded_Course',true,false)}" aura:id="designationLevelId" fieldName="Designation_Level__c" value="{!v.contactRecord.Designation_Level__c}"/>
                             </div>
+                             <!-- Nirosha 2021-04-23: Added new field on contact and course registration level -->
                             <div class="slds-col slds-size_1-of-2">
                                 <lightning:inputField required="true" aura:id="knowAboutUsId" fieldName="How_did_you_get_to_know_us__c" value="{!v.contactRecord.How_did_you_get_to_know_us__c}"/>
                             </div> 
@@ -635,12 +627,61 @@
                     <span class="slds-form-element__label slds-no-flex">
                         I would like to receive updates and information from the SIM Group of companies and SIM Society including (but not limited to) information and offers about new and/or current products and services, such as programmes, courses, events, and continual learning activities and services through the following channels. (Please select at least one and as many as you wish.)   
                     </span>
-                    <lightning:checkboxGroup disabled="{!!v.contactRecord.Marketing_Consent_Clause__c}" name="marketingchannels"
-                                            options="{! v.marketingchanneloptions }"
-                                            value="{! v.marketingchannelschosen }"/>
                     </div>
                     <div class="slds-col slds-size_1-of-12"></div>                   
-                </div> <br/> 
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div style="padding-left:36px">
+                    <span>
+                        <ui:inputCheckbox aura:id="checkbox_marketing_email" name="checkbox_marketing_email" value="{!v.contactRecord.Marketing_Channel_Email__c}"/>
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                    <span class="slds-form-element__label slds-no-flex">
+                        Email
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12"></div>                   
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div style="padding-left:36px">
+                    <span>
+                        <ui:inputCheckbox aura:id="checkbox_marketing_telephone_call" name="checkbox_marketing_telephone_call" value="{!v.contactRecord.Marketing_Channel_Telephone_call__c}"/>
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                    <span class="slds-form-element__label slds-no-flex">
+                        Telephone call
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12"></div>                   
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div style="padding-left:36px">
+                    <span>
+                        <ui:inputCheckbox aura:id="checkbox_marketing_text_messages" name="checkbox_marketing_text_messages" value="{!v.contactRecord.Marketing_Channel_Text_Messages__c}"/>
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                    <span class="slds-form-element__label slds-no-flex">
+                        Text messages
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12"></div>                   
+                </div>
+                <div class="slds-grid slds-gutters">
+                    <div style="padding-left:36px">
+                    <span>
+                        <ui:inputCheckbox aura:id="checkbox_marketing_post" name="checkbox_marketing_post" value="{!v.contactRecord.Marketing_Channel_Post__c}"/>
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                    <span class="slds-form-element__label slds-no-flex">
+                        Post
+                    </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12"></div>                   
+                </div><br/> 
                 <div class="slds-grid slds-gutters">
                     <div style="padding-left:12px">
                     <!-- Poon Koon 3/5/2021 Retrieve previous PDPA consent from contact-->

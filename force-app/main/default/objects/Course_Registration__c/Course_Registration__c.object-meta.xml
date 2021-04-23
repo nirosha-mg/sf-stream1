@@ -171,9 +171,11 @@
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts>
+        <listViewButtons>Pass_Records</listViewButtons>
         <searchResultsAdditionalFields>Course_Run_Id__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Payment_Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Registration_Status__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Pass_Records</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>

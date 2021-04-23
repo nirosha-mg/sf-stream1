@@ -146,6 +146,10 @@
     </webLinks>
     <webLinks>
         <label></label>
+        <name>Pass_Records</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
         <name>Send_Email_to_Learner</name>
     </webLinks>
 </CustomObjectTranslation>
