@@ -695,5 +695,16 @@
         component.find("PromoCode").set("v.value","");
         component.set("v.PromoCodeId","");
         component.set("v.PromoCodeApply",false);
+    },
+    //Poon Koon 2021-04-23: Remove selected marketing channels if unticked
+    RemoveSelectedMarketingChannels : function (component, event, helper) {
+        var checkVar = component.find("checkbox_marketing");
+        if (checkVar.get("v.value") == false)
+        {
+            component.find("checkbox_marketing_email").set("v.value",false);
+            component.find("checkbox_marketing_post").set("v.value",false);
+            component.find("checkbox_marketing_telephone_call").set("v.value",false);
+            component.find("checkbox_marketing_text_messages").set("v.value",false);
+        }
     }
 })

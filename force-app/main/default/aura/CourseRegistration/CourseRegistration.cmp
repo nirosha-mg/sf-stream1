@@ -620,7 +620,7 @@
                 <div class="slds-grid slds-gutters">
                     <div style="padding-left:12px">
                     <span>
-                        <ui:inputCheckbox aura:id="checkbox_marketing" name="checkbox_marketing" value="{!v.contactRecord.Marketing_Consent_Clause__c}"/>
+                        <ui:inputCheckbox aura:id="checkbox_marketing" name="checkbox_marketing" value="{!v.contactRecord.Marketing_Consent_Clause__c}" change="{!c.RemoveSelectedMarketingChannels}"/>
                     </span>
                     </div>
                     <div class="slds-col slds-size_10-of-12">
@@ -631,9 +631,9 @@
                     <div class="slds-col slds-size_1-of-12"></div>                   
                 </div>
                 <div class="slds-grid slds-gutters">
-                    <div style="padding-left:36px">
+                    <div style="padding-left:40px">
                     <span>
-                        <ui:inputCheckbox aura:id="checkbox_marketing_email" name="checkbox_marketing_email" value="{!v.contactRecord.Marketing_Channel_Email__c}"/>
+                        <ui:inputCheckbox disabled="{!!v.contactRecord.Marketing_Consent_Clause__c}" aura:id="checkbox_marketing_email" name="checkbox_marketing_email" value="{!v.contactRecord.Marketing_Channel_Email__c}"/>
                     </span>
                     </div>
                     <div class="slds-col slds-size_10-of-12">
@@ -644,9 +644,9 @@
                     <div class="slds-col slds-size_1-of-12"></div>                   
                 </div>
                 <div class="slds-grid slds-gutters">
-                    <div style="padding-left:36px">
+                    <div style="padding-left:40px">
                     <span>
-                        <ui:inputCheckbox aura:id="checkbox_marketing_telephone_call" name="checkbox_marketing_telephone_call" value="{!v.contactRecord.Marketing_Channel_Telephone_call__c}"/>
+                        <ui:inputCheckbox disabled="{!!v.contactRecord.Marketing_Consent_Clause__c}" aura:id="checkbox_marketing_telephone_call" name="checkbox_marketing_telephone_call" value="{!v.contactRecord.Marketing_Channel_Telephone_call__c}"/>
                     </span>
                     </div>
                     <div class="slds-col slds-size_10-of-12">
@@ -657,9 +657,9 @@
                     <div class="slds-col slds-size_1-of-12"></div>                   
                 </div>
                 <div class="slds-grid slds-gutters">
-                    <div style="padding-left:36px">
+                    <div style="padding-left:40px">
                     <span>
-                        <ui:inputCheckbox aura:id="checkbox_marketing_text_messages" name="checkbox_marketing_text_messages" value="{!v.contactRecord.Marketing_Channel_Text_Messages__c}"/>
+                        <ui:inputCheckbox disabled="{!!v.contactRecord.Marketing_Consent_Clause__c}" aura:id="checkbox_marketing_text_messages" name="checkbox_marketing_text_messages" value="{!v.contactRecord.Marketing_Channel_Text_Messages__c}"/>
                     </span>
                     </div>
                     <div class="slds-col slds-size_10-of-12">
@@ -670,9 +670,9 @@
                     <div class="slds-col slds-size_1-of-12"></div>                   
                 </div>
                 <div class="slds-grid slds-gutters">
-                    <div style="padding-left:36px">
+                    <div style="padding-left:40px">
                     <span>
-                        <ui:inputCheckbox aura:id="checkbox_marketing_post" name="checkbox_marketing_post" value="{!v.contactRecord.Marketing_Channel_Post__c}"/>
+                        <ui:inputCheckbox disabled="{!!v.contactRecord.Marketing_Consent_Clause__c}" aura:id="checkbox_marketing_post" name="checkbox_marketing_post" value="{!v.contactRecord.Marketing_Channel_Post__c}"/>
                     </span>
                     </div>
                     <div class="slds-col slds-size_10-of-12">
