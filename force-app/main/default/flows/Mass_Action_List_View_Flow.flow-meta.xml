@@ -12,7 +12,7 @@
         <expression>TRIM(LEFT({!IDs}, FIND(&quot; &quot;, {!IDs})))</expression>
     </formulas>
     <interviewLabel>Mass_Action_List_View_Flow {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Mass Action List View Flow</label>
+    <label>Mass Action List View Flow1</label>
     <loops>
         <name>LoopSelectedIDs</name>
         <label>LoopSelectedIDs</label>
@@ -23,6 +23,9 @@
         <nextValueConnector>
             <targetReference>Send_Cert_w_Attachment</targetReference>
         </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>End_Screen</targetReference>
+        </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -43,6 +46,22 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <screens>
+        <name>End_Screen</name>
+        <label>End Screen</label>
+        <locationX>176</locationX>
+        <locationY>614</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>LastScreenText</name>
+            <fieldText>&lt;p&gt;Emails have been send. Please return on click to return back to the view&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://simdigital--simstream1.lightning.force.com/lightning/o/Course_Registration__c/list&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://simdigital--simstream1.lightning.force.com/lightning/o/Course_Registration__c/list&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>Show_Selected_IDs</name>
         <label>Show Selected IDs</label>

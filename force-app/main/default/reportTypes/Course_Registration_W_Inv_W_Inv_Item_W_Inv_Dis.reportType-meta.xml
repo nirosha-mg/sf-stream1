@@ -1463,6 +1463,11 @@
             <field>Marketing_Channel_Text_Messages__c</field>
             <table>Course_Registration__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Marketing_Channel_Consented__c</field>
+            <table>Course_Registration__c</table>
+        </columns>
         <masterLabel>Course Registrations</masterLabel>
     </sections>
     <sections>

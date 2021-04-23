@@ -2622,6 +2622,25 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Marketing_Channel_Consented__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text messages</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Monthly_Basic_Salary__c</picklist>
         <values>
             <fullName>%241%2C000 - %241%2C499</fullName>

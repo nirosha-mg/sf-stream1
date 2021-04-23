@@ -76,19 +76,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Marketing_Channel_Email__c</field>
+                <field>Marketing_Channel_Consented__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Marketing_Channel_Text_Messages__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Marketing_Channel_Telephone_call__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Marketing_Channel_Post__c</field>
+                <field>How_did_you_get_to_know_us__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -127,10 +119,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Promo_Code__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>How_did_you_get_to_know_us__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

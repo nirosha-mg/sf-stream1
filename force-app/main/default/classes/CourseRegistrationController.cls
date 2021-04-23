@@ -37,8 +37,7 @@ public without sharing class CourseRegistrationController {
                          Account.IsPersonAccount,Office_No__c,account.UEN_No__c,Primary_Email_Address__c,
                          Preferred_Certificate_Name__c,Company_Name__c,account.Preferred_Contact_Method__c,account.Address_Type__c,
                          Account.Billing_Contact_Person__c,Account.Country__c,Account.Name,Account.Membership_No__c,Account.Membership_Payment_Status__c,
-                         Marketing_Consent_Clause__c, PDPA_Consent_Clause__c,
-                         Marketing_Channel_Email__c, Marketing_Channel_Post__c, Marketing_Channel_Telephone_call__c, Marketing_Channel_Text_Messages__c
+                         Marketing_Consent_Clause__c, PDPA_Consent_Clause__c, Marketing_Channel_Consented__c
                          FROM Contact WHERE Id=:userInfo.ContactId]){
             //
             if(iterator.Account.IsPersonAccount){

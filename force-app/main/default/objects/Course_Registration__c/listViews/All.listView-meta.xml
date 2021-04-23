@@ -16,8 +16,9 @@
     <columns>Need_User_Account__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Course_Title__c</field>
-        <operation>contains</operation>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Course_Registration__c.Course_Registration</value>
     </filters>
     <label>All</label>
 </ListView>

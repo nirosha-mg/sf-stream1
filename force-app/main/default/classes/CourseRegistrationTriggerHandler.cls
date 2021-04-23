@@ -169,8 +169,7 @@ public class CourseRegistrationTriggerHandler {
                                             Persons_with_Disabilities__c,Home_No__c,Preferred_Certificate_Name__c,Primary_Email_Address__c,
                                             RMIT_Alumni__c,Race__c,Remarks__c,Residency_Status__c,Salutation__c,Secondary_Email_Address__c,
                                             Secondary_Mobile__c,Secondary_Salutation__c,job_title__c,Address_Type__c,ownerid,How_did_you_get_to_know_us__c,
-                                            Sync_Learner_s_Record__c, Preferred_Contact_Method__c, Marketing_Consent_Clause__c, PDPA_Consent_Clause__c,
-                                            Marketing_Channel_Email__c, Marketing_Channel_Post__c, Marketing_Channel_Telephone_call__c, Marketing_Channel_Text_Messages__c
+                                            Sync_Learner_s_Record__c, Preferred_Contact_Method__c, Marketing_Consent_Clause__c, PDPA_Consent_Clause__c, Marketing_Channel_Consented__c
                                             from Course_Registration__c
                                             where id in : courseList]) {
                                                 if(contactEmailMap.containskey(crReg.email_address__c)) {
@@ -290,10 +289,7 @@ public class CourseRegistrationTriggerHandler {
         con.How_did_you_get_to_know_us__c = courseReg.How_did_you_get_to_know_us__c;
         con.PDPA_Consent_Clause__c = courseReg.PDPA_Consent_Clause__c;   
         // Poon Koon 2021-04-22: Sync marketing channel fields
-        con.Marketing_Channel_Email__c = courseReg.Marketing_Channel_Email__c;
-        con.Marketing_Channel_Post__c = courseReg.Marketing_Channel_Post__c;
-        con.Marketing_Channel_Telephone_call__c = courseReg.Marketing_Channel_Telephone_call__c;
-        con.Marketing_Channel_Text_Messages__c = courseReg.Marketing_Channel_Text_Messages__c;
+        con.Marketing_Channel_Consented__c = courseReg.Marketing_Channel_Consented__c;
         return con;
     }
     

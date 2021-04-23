@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <excludeButtons>ChangeOwnerOne</excludeButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
+    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -98,11 +99,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Marketing_Channel_Email__pc</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Marketing_Channel_Text_Messages__pc</field>
+                <field>Marketing_Channel_Consented__pc</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -145,14 +142,6 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Credit_Term_Days__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Marketing_Channel_Telephone_call__pc</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Marketing_Channel_Post__pc</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

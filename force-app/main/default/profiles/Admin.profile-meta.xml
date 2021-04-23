@@ -1353,6 +1353,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Marketing_Channel_Consented__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Marketing_Channel_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2018,6 +2023,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Course_Registration__c.Marketing_Channel_Consented__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Course_Registration__c.Marketing_Channel_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2654,11 +2664,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Course__c.AccountId__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Course__c.Active_Test__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3773,22 +3778,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Lead.Marketing_Channel_Email__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Lead.Marketing_Channel_Post__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Lead.Marketing_Channel_Telephone_call__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Lead.Marketing_Channel_Text_Messages__c</field>
+        <field>Lead.Marketing_Channel_Consented__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
